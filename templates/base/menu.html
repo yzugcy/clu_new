@@ -10,24 +10,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav nav-menu float-none text-center">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages <i class="ti-angle-down"></i></a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="about.html">About</a>
-                                <a class="dropdown-item" href="contact.html">Contact</a>
-                                <a class="dropdown-item" href="contact-two.html">Contact 2</a>
-                                <a class="dropdown-item" href="404.html">404</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'blog:list' %}">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'course:list' %}">Course</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'blog:list' %}">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'course:list' %}">Course</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
