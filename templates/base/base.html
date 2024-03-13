@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>CULTCH - Exploring Chinese Language & Culture</title>
+
+        <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}" />
+        <!-- Custom Stylesheet -->
+            <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+            <link rel="stylesheet" href="{% static 'css/feather.css' %}" />
+    </head>
+
+    <body class="color-theme-blue mont-font">
+        <div class="preloader"></div>
+
+        <div class="main-wrap">
+            <!-- header wrapper -->
+            {% include "base/wrapper.html" %}
+            {% include "base/menu.html" %}
+
+            {% block content %}
+            {% endblock content %}
+
+            <!-- footer wrapper -->
+            {% include 'base/footer.html' %}
+            <!-- footer wrapper -->
+        </div>
+
+        <script src="{% static 'js/plugin.js' %}"></script>
+        <script src="{% static 'js/aos.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
