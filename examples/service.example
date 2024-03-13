@@ -1,13 +1,13 @@
 [Unit]
-Description=django_boilerplate-uWSGI-instance
+Description=cultch-uWSGI-instance
 After=network.target postgresql-11.service
 
 [Service]
 User=centos
 Group=nginx
-WorkingDirectory=/opt/django_boilerplate
-Environment="PATH=/opt/django_boilerplate/venv/bin"
-ExecStart=/opt/django_boilerplate/venv/bin/uwsgi --ini /opt/django_boilerplate/uwsgi/uwsgi.ini
+WorkingDirectory=/opt/cultch
+Environment="PATH=/opt/cultch/venv/bin"
+ExecStart=/opt/cultch/venv/bin/uwsgi --ini /opt/cultch/uwsgi/uwsgi.ini
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
