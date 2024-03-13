@@ -14981,8 +14981,8 @@ select.sort {
 }
 
 .login-card {
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 400px;
+  max-width: 420px;
 }
 
 .coming-soon-card {
