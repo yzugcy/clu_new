@@ -58,6 +58,8 @@ LOCAL_APPS = [
     'customauth.apps.CustomauthConfig',
     'dashboard.apps.DashboardConfig',
     'pages.apps.PagesConfig',
+    'course.apps.CourseConfig',
+    'blog.apps.BlogConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
