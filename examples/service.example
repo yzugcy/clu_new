@@ -1,6 +1,6 @@
 [Unit]
 Description=cultch-uWSGI-instance
-After=network.target postgresql-11.service
+After=network.target postgresql-13.service
 
 [Service]
 User=centos

@@ -30,9 +30,3 @@ DB_CONFIG = {
     'USER': os.getenv('DB_USER', '<db_user>'),
     'PASSWORD': os.getenv('DB_PASS', '<db_password>')
 }
-
-# For SQLite database (comment it if not needed)
-DB_CONFIG = {
-    'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.sqlite3'),
-    'NAME': os.getenv('DB_NAME', 'db.sqlite3'),
-}
