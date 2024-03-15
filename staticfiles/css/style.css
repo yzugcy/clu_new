@@ -240,7 +240,9 @@
   top: 0;
   content: "";
   border-radius: 10px;
-  background: #ffe2ee;
+  background-image: url("/static/images/banner.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   width: 90%;
   margin: 0 auto;
