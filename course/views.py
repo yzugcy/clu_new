@@ -20,6 +20,17 @@ class CourseListView(ListView):
         return context
 
 
+class CourseDetailsView(View):
+    template_name = 'course/course-details.html'
+
+    def get(self, request, *args, **kwargs):
+        course = get_object_or_404(Course, pk=self.kwargs['pk'])
+        context = {
+            'course': course
+        }
+        return render(request, self.template_name, context)
+
+
 class CourseOverviewView(LoginRequiredMixin, View):
     template_name = 'courses/overview.html'
 

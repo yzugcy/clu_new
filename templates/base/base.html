@@ -13,6 +13,8 @@
         <!-- Custom Stylesheet -->
             <link rel="stylesheet" href="{% static 'css/style.css' %}" />
             <link rel="stylesheet" href="{% static 'css/feather.css' %}" />
+            {% block extracss %}
+            {% endblock extracss %}
     </head>
 
     <body class="color-theme-blue mont-font">
@@ -37,5 +39,7 @@
         <script>
             AOS.init();
         </script>
+        {% block extrajs %}
+        {% endblock extrajs %}
     </body>
 </html>
