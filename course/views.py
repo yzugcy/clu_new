@@ -8,10 +8,16 @@ from course.models import Course, CourseContent, CourseContentReadStatus
 class CourseListView(ListView):
     """ Course view """
     template_name = 'course/course.html'
+    model = Course
 
-    def get(self, request, *args, **kwargs):
-        context = {}
-        return render(request, self.template_name, context)
+    def get_queryset(self, **kwargs):
+        self.course_list = self.model.objects.all().order_by('-pk')
+        return self.course_list
+
+    def get_context_data(self, **kwargs):
+        context = super(CourseListView, self).get_context_data(**kwargs)
+        context['total_count'] = self.course_list.count()
+        return context
 
 
 class CourseOverviewView(LoginRequiredMixin, View):
