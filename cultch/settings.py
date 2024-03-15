@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+from django.utils.translation import gettext_lazy as _
 
 from .local_settings import (
     SECRET_KEY, DEBUG, ALLOWED_HOSTS, DB_CONFIG,
@@ -47,11 +48,14 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 ]
 
 THIRD_PARTY_APPS = [
     # https://www.django-rest-framework.org/#installation
     'rest_framework',
+    # https://django-rosetta.readthedocs.io/installation.html
+    'rosetta',
 ]
 
 LOCAL_APPS = [
@@ -137,7 +141,16 @@ LOGIN_REDIRECT_URL = 'dashboard:dashboard'
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('zh-hans', _('Chinese')),
+)
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale/')
+]
 
 TIME_ZONE = 'UTC'
 

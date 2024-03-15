@@ -14,21 +14,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 
 from .views import HomePageView
-
+from .translations import set_language
 
 urlpatterns = [
     path('management/', admin.site.urls),
+    path('setlang/', set_language, name='set_language'),
+]
+
+# Language Translation
+urlpatterns += i18n_patterns(
     path('', HomePageView.as_view(), name='home'),
     path('user/', include('customauth.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('courses/', include('course.urls')),
     path('blogs/', include('blog.urls')),
-]
+)
+
+# rosetta urls ------------------------------
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        re_path(r'^rosetta/', include('rosetta.urls'))
+    ]
 
 # serve media files in development environment --------------------------------
 if settings.DEBUG:

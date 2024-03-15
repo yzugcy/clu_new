@@ -1,3 +1,7 @@
+{% load humanize static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+
 <div class="upper-header bg-greylight">
     <div class="container">
         <div class="row">
@@ -23,10 +27,11 @@
                 <ul class="list-inline list-item-style mt-0 float-right">
                     <li class="list-inline-item">
                         <div class="form-group">
-                            <select class="bg-greylight" id="exampleFormControlSelect1" style="border: none; font-size: 11px; font-weight: 600;">
-                              <option>English</option>
-                              <option>中国</option>
-                            </select>
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            <a href="{% url 'set_language' %}?language={{ languages.0.code }}">English</a>
+                            <a href="{% url 'set_language' %}?language={{ languages.1.code }}">中国</a>
                         </div>
                     </li>
                     <li class="list-inline-item">
