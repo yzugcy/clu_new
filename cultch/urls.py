@@ -26,8 +26,8 @@ urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('user/', include('customauth.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('course/', include('course.urls')),
-    path('blog/', include('blog.urls')),
+    path('courses/', include('course.urls')),
+    path('blogs/', include('blog.urls')),
 ]
 
 # serve media files in development environment --------------------------------
