@@ -64,6 +64,7 @@ LOCAL_APPS = [
     'pages.apps.PagesConfig',
     'course.apps.CourseConfig',
     'blog.apps.BlogConfig',
+    'virtualtour.apps.VirtualtourConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

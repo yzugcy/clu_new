@@ -34,6 +34,7 @@ urlpatterns += i18n_patterns(
     path('dashboard/', include('dashboard.urls')),
     path('courses/', include('course.urls')),
     path('blogs/', include('blog.urls')),
+    path('virtualtour/', include('virtualtour.urls')),
 )
 
 # rosetta urls ------------------------------
