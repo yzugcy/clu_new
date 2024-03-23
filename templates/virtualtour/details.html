@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    {% load static %}
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1" />
 
-        <title>El Kurru &amp; The Tomb of Tanwetamani</title>
+        <title>{{ tour.title }}</title>
 
         <meta name="description" content="" />
-        <meta name="title" content="El Kurru &amp; The Tomb of Tanwetamani" />
+        <meta name="title" content="{{ tour.title }}" />
 
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="kurru.html" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="El Kurru &amp; The Tomb of Tanwetamani" />
+        <meta property="og:title" content="{{ tour.title }}" />
         <meta property="og:description" content="A 2,500 year old tomb protected by the local community" />
         <meta name="url" property="og:image" content="https://tapestrystorage.blob.core.windows.net/kurru-data/multimedia/kurru_splash.jpg" />
 
         <!-- Twitter Meta Tags -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="tapestry.cyark.org" />
-        <meta property="twitter:url" content="kurru.html" />
-        <meta property="twitter:title" content="El Kurru &amp; The Tomb of Tanwetamani" />
+        <meta property="twitter:title" content="{{ tour.title }}" />
         <meta property="twitter:description" content="A 2,500 year old tomb protected by the local community" />
         <meta property="twitter:image" content="https://tapestrystorage.blob.core.windows.net/kurru-data/multimedia/kurru_splash.jpg" />
 
@@ -55,15 +54,15 @@
                 <button id="logo" style="display: none;">
                     <img
                         class="tapestryLogo"
-                        src="https://tapestrystorage.blob.core.windows.net/ui-elements/logos/logo.svg"
+                        src="{% static 'images/yzu.jpeg' %}"
                         alt="The logo displays a square emblem of intertwined orange and red geometric shapes, reminiscent of yarn strands used in weaving."
                     />
                 </button>
                 <button id="logoType">
                     <img
                         class="tapestryLogo"
-                        src="https://tapestrystorage.blob.core.windows.net/ui-elements/logos/logo_type_dark.svg"
-                        alt="The logo displays the word 'TAPESTRY' in gray capital letters next to a square emblem of intertwined orange and red geometric shapes, reminiscent of yarn strands used in weaving."
+                        src="{% static 'images/yzu.jpeg' %}"
+                        alt="The logo displays the word 'CULTCH in gray capital letters next to a square emblem of intertwined orange and red geometric shapes, reminiscent of yarn strands used in weaving."
                     />
                 </button>
 
@@ -134,19 +133,19 @@
 
         <div aria-hidden="false" class="splashPage" id="splashPage">
             <div class="sBackgroundImage">
-                <img class="sBackgroundImageTag" alt="" src="https://tapestrystorage.blob.core.windows.net/kurru-data/multimedia/kurru_splash.jpg" />
+                <img class="sBackgroundImageTag" alt="" src="{{ tour.photo.url }}" />
             </div>
             <div class="sLeftSideGroup">
                 <div class="sOverlay_bg" id="overlay_bg"></div>
                 <div class="sInnerGroup" id="sInnerGroup">
                     <div class="oInfoBubbles">
-                        <div class="oInfoBubble">Duration: 10 mins<span id="oTourDuration"></span></div>
-                        <div class="oInfoBubble">9 Scenes</div>
+                        <div class="oInfoBubble">Duration: {{ tour.duration }} mins<span id="oTourDuration"></span></div>
+                        <div class="oInfoBubble">{{ tour.scenes }} Scenes</div>
                     </div>
                     <div class="spTextGroup">
-                        <h1 class="sTitle unselectable" id="sTitle">El Kurru &amp; The Tomb of Tanwetamani</h1>
-                        <div class="sTagline unselectable" id="sTagline">A 2,500 year old tomb protected by the local community</div>
-                        <div class="sLocationGroup unselectable" id="sLocation">Location: El Kurru, Sudan</div>
+                        <h1 class="sTitle unselectable" id="sTitle">{{ tour.title }}</h1>
+                        <div class="sTagline unselectable" id="sTagline">{{ tour.description }}</div>
+                        <div class="sLocationGroup unselectable" id="sLocation">Location: {{ tour.location }}</div>
                     </div>
                     <!--
                 <div class="sMapImageGroup">
@@ -160,11 +159,8 @@
                     </div>
                     <div class="bEnterButtonGroup" id="bEnterButtonGroup">
                         <div class="languageButtonGroup">
-                            <button aria-label="Selected language English" onclick="location.href='kurru.html';" class="bLanguage bLangActive unselectable" id="bEnglishLanguage">English</button>
-                            <button aria-label="Click to change the language to Arabic" onclick="location.href='kurru76d1.html?content=alt&amp;lang=ara';" class="bLanguage bLangSecond unselectable" id="bSecondLanguage">
-                                العربية
-                                <div class="toolTipLang">Arabic</div>
-                            </button>
+                            <button aria-label="Selected language English" onclick="location.href='/en/virtualtour/{{tour.slug}}/explore/';" class="bLanguage bLangActive unselectable" id="bEnglishLanguage">English</button>
+                            <button aria-label="Selected language English" onclick="location.href='/en/virtualtour/{{tour.slug}}/explore/';" class="bLanguage bLangActive unselectable" id="bEnglishLanguage">Chinese</button>
                         </div>
 
                         <div class="l_BottomNav">
@@ -193,19 +189,14 @@
 
                         <div aria-valuetext="Partners links and names" class="sPartnersGroup">
                             <div class="sPartnersLogoGroup" id="sPartnersLogoGroup">
-                                <a class="sPartnerLogo" aria-label="Partner logo, click to visit U.S. State Department website " href="https://www.state.gov/" target="_blank">
-                                    <img src="https://tapestrystorage.blob.core.windows.net/common/flag_logo.png" alt="U.S. State Department" />
-                                    <div class="sPartnerTooltip">U.S. State Department</div>
+                                <a class="sPartnerLogo" aria-label="Partner logo, click to Yangzhou University website " href="https://www.yzu.edu.cn/" target="_blank">
+                                    <img src="{% static 'images/yzu.jpeg' %}" alt="Yangzhou University" />
+                                    <div class="sPartnerTooltip">Yangzhou University</div>
                                 </a>
 
-                                <a class="sPartnerLogo" aria-label="Partner logo, click to visit Community Heritage Exchange Inititiative website " href="https://artsandculture.google.com/project/preservation" target="_blank">
-                                    <img src="https://tapestrystorage.blob.core.windows.net/common/CHEI_logo.png" alt="Community Heritage Exchange Inititiative" />
-                                    <div class="sPartnerTooltip">Community Heritage Exchange Inititiative</div>
-                                </a>
-
-                                <a class="sPartnerLogo" aria-label="Partner logo, click to visit Kelsey Museum of Archaeology website " href="https://lsa.umich.edu/kelsey" target="_blank">
-                                    <img src="https://tapestrystorage.blob.core.windows.net/common/kelsey-logo.png" alt="Kelsey Museum of Archaeology" />
-                                    <div class="sPartnerTooltip">Kelsey Museum of Archaeology</div>
+                                <a class="sPartnerLogo" aria-label="Partner logo, click to visit College of Information Engineering website " href="http://xxgcxy.yzu.edu.cn/en/" target="_blank">
+                                    <img src="http://xxgcxy.yzu.edu.cn/en/images/logo.png" alt="College of Information Engineering" />
+                                    <div class="sPartnerTooltip">College of Information Engineering</div>
                                 </a>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ app_name = "vt"
 urlpatterns = [
     path("", views.VirtualTourListView.as_view(), name="list"),
     path(
-        '<int:pk>/explore/', views.VirtualTourDetailsView.as_view(),
+        '<str:slug>/explore/', views.VirtualTourDetailsView.as_view(),
         name='details'
     ),
 ]

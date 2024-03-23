@@ -17578,3 +17578,98 @@ body.theme-dark .text-grey-100, body.theme-dark .text-grey-200, body.theme-dark 
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.tapestryGroup {
+  display: flex;
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  max-width: 841px;
+  margin: auto;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tapestryBox {
+  margin: 5px;
+  margin-bottom: 20px;
+  width: 229px;
+  height: 351px;
+  pointer-events: none;
+  filter: drop-shadow(0px 0px 3px #11111160);
+  overflow: hidden;
+}
+
+.tapestryBox:first-child {
+  max-width: 707px;
+  min-width: 229px;
+  width: 100%;
+}
+
+.tapestryParent {
+  cursor: pointer;
+  width: inherit;
+  height: inherit;
+  pointer-events: all;
+  display: grid;
+  position: relative;
+}
+
+.tapestryImg {
+  width: inherit;
+  height: inherit;
+  border-radius: 16px;
+  position: absolute;
+}
+
+.tapestryBoxGradient {
+  display: block;
+  position: relative;
+  width: inherit;
+  height: 175px;
+  border-radius: 15px;
+}
+
+.tapestryBoxGradient.top {
+  top: 0;
+  background-image: linear-gradient(to bottom, #00000042, rgba(0, 0, 0, 0));
+}
+
+.tapestryBoxGradient.bottom {
+  background-image: linear-gradient(to top, #00000059, rgba(0, 0, 0, 0));
+  bottom: 0;
+}
+
+.tapestryBubbles {
+  display: flex;
+  position: absolute;
+  margin-top: 5px;
+  font-size: 9px;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 33px;
+  width: inherit;
+  justify-content: center;
+}
+
+.tapestryTitleParent {
+  width: inherit;
+  position: absolute;
+  top: 37px;
+  display: flex;
+  justify-content: center;
+}
+
+.tapestryBottomInfo {
+  display: block;
+  bottom: 0;
+  position: absolute;
+  width: inherit;
+  height: 86px;
+  border-radius: 0 0 15px 15px;
+  background-color: #ffffffd1;
+  text-align: center;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}
