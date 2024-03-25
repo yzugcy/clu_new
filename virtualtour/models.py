@@ -12,6 +12,8 @@ class Tour(models.Model):
     duration = models.IntegerField(_("Duration in minutes"), default=0)
     scenes = models.IntegerField(_("Scenes"), default=0)
     location = models.CharField(_("Location"), max_length=255, null=True)
+    latitude = models.CharField(_("Latitude"), max_length=255, null=True)
+    longitude = models.CharField(_("Longitude"), max_length=255, null=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
