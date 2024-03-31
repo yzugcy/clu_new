@@ -28,63 +28,63 @@ msgstr ""
 
 #: customauth/models/profile.py:15
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: customauth/models/profile.py:20
 msgid "Bio"
-msgstr ""
+msgstr "简介"
 
 #: customauth/models/profile.py:23 templates/base/footer.html:56
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: customauth/models/profile.py:26
 msgid "Date of Birth"
-msgstr ""
+msgstr "出生日期"
 
 #: customauth/models/user.py:41
 msgid "Email Address"
-msgstr ""
+msgstr "电子邮件地址"
 
 #: customauth/models/user.py:43
 msgid "Staff Status"
-msgstr ""
+msgstr "员工状况"
 
 #: customauth/models/user.py:44
 msgid "Active Status"
-msgstr ""
+msgstr "活跃状态"
 
 #: customauth/models/user.py:45
 msgid "accepted terms"
-msgstr ""
+msgstr "接受的条款"
 
 #: customauth/models/user.py:46
 msgid "terms read"
-msgstr ""
+msgstr "阅读的条款"
 
 #: customauth/models/user.py:47
 msgid "Date Joined"
-msgstr ""
+msgstr "加入日期"
 
 #: customauth/models/user.py:48
 msgid "Last Updated"
-msgstr ""
+msgstr "最近更新时间"
 
 #: customauth/models/user.py:51
 msgid "email token"
-msgstr ""
+msgstr "电子邮件令牌"
 
 #: customauth/models/user.py:54
 msgid "additional email address"
-msgstr ""
+msgstr "附加电子邮件地址"
 
 #: templates/base/base.html:9
 msgid "CULTCH - Exploring Chinese Language & Culture"
-msgstr ""
+msgstr "CULTCH - 探索中国语言和文化"
 
 #: templates/base/footer.html:13 templates/base/footer.html:61
 msgid "99XQ+JXJ, Hanjiang District, Yangzhou, Yangzhou, Jiangsu, China, 225012"
-msgstr ""
+msgstr "99XQ+JXJ,扬州邗江区, 扬州, 江苏, 中国, 225012"
 
 #: templates/base/footer.html:15
 msgid "support@mail.com"
@@ -92,11 +92,11 @@ msgstr ""
 
 #: templates/base/footer.html:33
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: templates/base/footer.html:40
 msgid "Quick Access"
-msgstr ""
+msgstr "Quick Access"
 
 #: templates/base/footer.html:42 templates/base/menu.html:16
 msgid "Timeline"
@@ -104,11 +104,11 @@ msgstr "时间线"
 
 #: templates/base/footer.html:43
 msgid "Blog"
-msgstr ""
+msgstr "博客"
 
 #: templates/base/footer.html:44
 msgid "Feedback"
-msgstr ""
+msgstr "反馈"
 
 #: templates/base/footer.html:48 templates/base/menu.html:18
 msgid "About"
@@ -116,15 +116,15 @@ msgstr "关于"
 
 #: templates/base/footer.html:50
 msgid "FAQ"
-msgstr ""
+msgstr "常问问题"
 
 #: templates/base/footer.html:51
 msgid "Term of use"
-msgstr ""
+msgstr "使用条款"
 
 #: templates/base/footer.html:52
 msgid "Privacy Policy"
-msgstr ""
+msgstr "隐私政策"
 
 #: templates/base/footer.html:58 templates/base/wrapper.html:37
 #: templates/virtualtour/details.html:194
@@ -133,11 +133,11 @@ msgstr "扬州大学"
 
 #: templates/base/footer.html:69
 msgid "copyright. All rights reserved."
-msgstr ""
+msgstr "版权。版权所有。"
 
 #: templates/base/footer.html:72
 msgid "Design by "
-msgstr ""
+msgstr "由...设计"
 
 #: templates/base/menu.html:15
 msgid "Home"
@@ -173,270 +173,271 @@ msgstr "隐私政策"
 
 #: templates/home.html:9
 msgid "Discover the Ancient Civilization of China."
-msgstr ""
+msgstr "探索中国古代文明。"
 
 #: templates/home.html:10
 msgid "For only course you need to learn Chinese history"
-msgstr ""
+msgstr "你唯一需要学习的课程就是中国历史"
 
 #: templates/home.html:25
 msgid "All Categories"
-msgstr ""
+msgstr "所有类别"
 
 #: templates/home.html:26
 msgid "literature"
-msgstr ""
+msgstr "文学"
 
 #: templates/home.html:27
 msgid "Art"
-msgstr ""
+msgstr "艺术"
 
 #: templates/home.html:28
 msgid "History Science"
-msgstr ""
+msgstr "历史科学"
 
 #: templates/home.html:29
 msgid "Science and Technology"
-msgstr ""
+msgstr "科学和技术"
 
 #: templates/home.html:30
 msgid "Philosophy"
-msgstr ""
+msgstr "哲学"
 
 #: templates/home.html:41
 msgid "Popular Search :"
-msgstr ""
+msgstr "热门搜索"
 
 #: templates/home.html:51
 msgid "Why Choose Us?"
-msgstr ""
+msgstr "为什么选择我们"
 
 #: templates/home.html:52
 msgid ""
-"We are the best online learning platform with AI-model,VR and auto creation "
-"of poems."
+"我们是最好的在线学习平台，具有AI模型、VR和自动创作诗歌。"
 msgstr ""
 
 #: templates/home.html:66
 msgid "Blazing Performance"
-msgstr ""
+msgstr "出色的性能"
 
 #: templates/home.html:67
 msgid "User friendly interface, easy to use and fast."
-msgstr ""
+msgstr "用户友好的界面，易于使用且快速"
 
 #: templates/home.html:80
 msgid "Free Updates"
-msgstr ""
+msgstr "免费更新"
 
 #: templates/home.html:81
 msgid "Auto update facility"
-msgstr ""
+msgstr "自动更新设施"
 
 #: templates/home.html:94
 msgid "24/7 Supports"
-msgstr ""
+msgstr "24/7 支持"
 
 #: templates/home.html:95
 msgid "No need to worry,our system will handle your emergency cases."
-msgstr ""
+msgstr "不用担心，我们的系统会处理您的紧急情况。"
 
 #: templates/home.html:106
 msgid "Online Popular Course"
-msgstr ""
+msgstr "在线热门课程"
 
 #: templates/home.html:107
 msgid "History of China, Invention, Han dyansty, scholars"
-msgstr ""
+msgstr "中国史、发明、汉代、学者"
 
 #: templates/home.html:119
 msgid "Desinger"
-msgstr ""
+msgstr "设计者"
 
 #: templates/home.html:134
 msgid "2 customer review"
-msgstr ""
+msgstr "2 客户评价"
 
 #: templates/home.html:147
 msgid "Are you Looking for Live Class ?"
-msgstr ""
+msgstr "您在寻找直播课程吗?"
 
 #: templates/home.html:301
 msgid "Subscribe up to our newsletter"
-msgstr ""
+msgstr "订阅我们的时事通讯"
 
 #: templates/virtualtour/details.html:72
 msgid "Sound Off"
-msgstr ""
+msgstr "声音关闭"
 
 #: templates/virtualtour/details.html:77
 msgid "Sound On"
-msgstr ""
+msgstr "声音打开"
 
 #: templates/virtualtour/details.html:82
 msgid "Coming Soon"
-msgstr ""
+msgstr "即将推出"
 
 #: templates/virtualtour/details.html:87
 msgid "Resources"
-msgstr ""
+msgstr "资源"
 
 #: templates/virtualtour/details.html:92
 msgid "Fullscreen Mode"
-msgstr ""
+msgstr "全屏模式"
 
 #: templates/virtualtour/details.html:97
 msgid "Exit fullscreen Mode"
-msgstr ""
+msgstr "退出全屏模式"
 
 #: templates/virtualtour/details.html:110
 msgid "Quality Settings: HD"
-msgstr ""
+msgstr "画质设置：高清"
 
 #: templates/virtualtour/details.html:114
 msgid "Quality Settings: SD"
-msgstr ""
+msgstr "质量设置：标清"
 
 #: templates/virtualtour/details.html:119
 msgid "Subtitles"
-msgstr ""
+msgstr "字幕"
 
 #: templates/virtualtour/details.html:142
 msgid "Duration: {{ tour.duration }} mins"
-msgstr ""
+msgstr "期间: {{ tour.duration }}分钟"
 
 #: templates/virtualtour/details.html:171
 msgid "Loading..."
-msgstr ""
+msgstr "加载中"
 
 #: templates/virtualtour/details.html:181
 msgid "Start"
-msgstr ""
+msgstr "开始"
 
 #: templates/virtualtour/details.html:199
 msgid "College of Information Engineering"
-msgstr ""
+msgstr "信息工程学院"
 
 #: templates/virtualtour/details.html:211
 msgid "WebGL check failed"
-msgstr ""
+msgstr "WebGL 检查失败"
 
 #: templates/virtualtour/details.html:214
 msgid "To display a Tapestry in 3D we rely on"
-msgstr ""
+msgstr "为了以 3D 方式显示 Tapestry，我们依赖"
 
 #: templates/virtualtour/details.html:215
 msgid "You can check if your browser is compatible on"
-msgstr ""
+msgstr "您可以检查您的浏览器是否兼容"
 
 #: templates/virtualtour/details.html:236
 msgid "Voices"
-msgstr ""
+msgstr "声音"
 
 #: templates/virtualtour/details.html:253
 msgid "Ibrahim Sidahmed"
-msgstr ""
+msgstr "易卜拉欣·西达迈德"
 
 #: templates/virtualtour/details.html:254
 msgid "Village Resident"
-msgstr ""
+msgstr "村居民"
 
 #: templates/virtualtour/details.html:267
 msgid "Jaffar Khidr"
-msgstr ""
+msgstr "贾法尔·基德尔"
 
 #: templates/virtualtour/details.html:268
 msgid "Construction Foreman"
-msgstr ""
+msgstr "施工工头"
 
 #: templates/virtualtour/details.html:281
 msgid "Mansour Al Hadari"
-msgstr ""
+msgstr "曼苏尔·哈达里"
 
 #: templates/virtualtour/details.html:282
 msgid "Guide, guardian and builder"
-msgstr ""
+msgstr "引导者、守护者和建设者"
 
 #: templates/virtualtour/details.html:299
 #: templates/virtualtour/details.html:376
 msgid "Read More"
-msgstr ""
+msgstr "阅读更多"
 
 #: templates/virtualtour/details.html:300
 #: templates/virtualtour/details.html:377
 msgid "Read Less"
-msgstr ""
+msgstr "少读"
 
 #: templates/virtualtour/details.html:358
 msgid "Drag to Explore"
-msgstr ""
+msgstr "拖动探索"
 
 #: templates/virtualtour/details.html:415
 msgid "Reset camera"
-msgstr ""
+msgstr "重置相机"
 
 #: templates/virtualtour/details.html:419
 msgid "Go back"
-msgstr ""
+msgstr "回去"
 
 #: templates/virtualtour/details.html:429
 msgid "Support Us!"
-msgstr ""
+msgstr "支持我们"
 
 #: templates/virtualtour/details.html:432
 msgid ""
 "Tapestry is brought to you by CyArk, a 501(c)(3) nonprofit organization "
 "committed to empowering connections with historic places."
-msgstr ""
+msgstr "Tapestry 由 CyArk（一家 501(c)(3) 非营利组织）为您提供."
+"致力于加强与历史名胜的联系。"
+"
 
 #: templates/virtualtour/details.html:435
 msgid "Donate"
-msgstr ""
+msgstr "捐"
 
 #: templates/virtualtour/details.html:440
 msgid "Want to Explore More?"
-msgstr ""
+msgstr "想要探索更多"
 
 #: templates/virtualtour/details.html:446
 msgid "Church of St. George"
-msgstr ""
+msgstr "圣乔治教堂"
 
 #: templates/virtualtour/details.html:447
 msgid "Home to the oldest surviving depiction of the Holy Land"
-msgstr ""
+msgstr "现存最古老的圣地描绘的所在地"
 
 #: templates/virtualtour/details.html:452
 msgid "Explore"
-msgstr ""
+msgstr "探索"
 
 #: templates/virtualtour/details.html:457
 msgid "Take our Survey!"
-msgstr ""
+msgstr "参加我们的调查"
 
 #: templates/virtualtour/list.html:14
 msgid "Take a Tour Now"
-msgstr ""
+msgstr "立即参观"
 
 #: virtualtour/models.py:8
 msgid "Tour Title"
-msgstr ""
+msgstr "巡演名称"
 
 #: virtualtour/models.py:12
 msgid "Duration in minutes"
-msgstr ""
+msgstr "持续时间（分钟）"
 
 #: virtualtour/models.py:13
 msgid "Scenes"
-msgstr ""
+msgstr "地点"
 
 #: virtualtour/models.py:14
 msgid "Location"
-msgstr ""
+msgstr "地点"
 
 #: virtualtour/models.py:15
 msgid "Latitude"
-msgstr ""
+msgstr "纬度"
 
 #: virtualtour/models.py:16
 msgid "Longitude"
-msgstr ""
+msgstr "经度"
