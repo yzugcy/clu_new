@@ -25,3 +25,17 @@ class Tour(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Video(models.Model):
+    tour = models.ForeignKey(Tour, on_delete=models.CASCADE, related_name="videos")
+    video_file = models.FileField(_("Video"), upload_to="videos/")
+    ordering = models.IntegerField(_("Ordering"), default=1)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['ordering']
+
+    def __str__(self):
+        return self.tour.title
