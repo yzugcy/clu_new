@@ -62,7 +62,6 @@ LOCAL_APPS = [
     'customauth.apps.CustomauthConfig',
     'dashboard.apps.DashboardConfig',
     'pages.apps.PagesConfig',
-    'course.apps.CourseConfig',
     'blog.apps.BlogConfig',
     'virtualtour.apps.VirtualtourConfig',
 ]
