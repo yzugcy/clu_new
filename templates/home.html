@@ -1,13 +1,13 @@
 {% extends 'base/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
 <div class="banner-wrapper bg-after-fluid">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 order-lg-1 pt-lg--10 pb-lg--10 xl-p-5">
-                <h2 class="display3-size display2-md-size fw-700 aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Discover the Ancient Civilization of China.</h2>
-                <h4 class="font-xssss fw-600 ml-1 aos-init lh-24" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">For only course you need to learn Chinese history</h4>
+                <h2 class="display3-size display2-md-size fw-700 aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">{% translate 'Discover the Ancient Civilization of China.' %}</h2>
+                <h4 class="font-xssss fw-600 ml-1 aos-init lh-24" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">{% translate 'For only course you need to learn Chinese history' %}</h4>
                 <div class="form-group mt-lg-5 p-3 border-light border p-2 bg-white rounded-lg aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
                     <form action="" method="get">
                         <div class="row">
@@ -22,12 +22,12 @@
                                 <div class="form-group icon-input mb-0">
                                     <i class="ti-package font-xs text-grey-400"></i>
                                     <select class="style1-select bg-transparent border-0 pl-5">
-                                        <option value="">All Categories</option>
-                                        <option value="151781441596 ">literature</option>
-                                        <option value="139360141372 ">Art</option>
-                                        <option value="139118313532 ">History Science</option>
-                                        <option value="139118313532 ">Science and Technology</option>
-                                        <option value="139360141372 ">Philosophy</option>
+                                        <option value="">{% translate 'All Categories' %}</option>
+                                        <option value="151781441596 ">{% translate 'literature' %}</option>
+                                        <option value="139360141372 ">{% translate 'Art' %}</option>
+                                        <option value="139118313532 ">{% translate 'History Science' %}</option>
+                                        <option value="139118313532 ">{% translate 'Science and Technology' %}</option>
+                                        <option value="139360141372 ">{% translate 'Philosophy' %}</option>
 
                                     </select>
                                 </div>
@@ -38,7 +38,7 @@
                         </div>
                     </form>
                 </div>
-                <h4 class="font-xssss ml-1 lh-24 text-white" style="font-size: 16px !important; font-weight: bold;"><b>Popular Search :</b> <a href="" style="color: #cdd810;">books,history, literature</a>, <a href="" style="color: #cdd810;">Art</a>, <a href="" style="color: #cdd810;">Science</a>, <a href="" style="color: #cdd810;">Philosophy</a></h4>
+                <h4 class="font-xssss ml-1 lh-24 text-white" style="font-size: 16px !important; font-weight: bold;"><b>{% translate 'Popular Search :' %}</b> <a href="" style="color: #cdd810;">books,history, literature</a>, <a href="" style="color: #cdd810;">Art</a>, <a href="" style="color: #cdd810;">Science</a>, <a href="" style="color: #cdd810;">Philosophy</a></h4>
             </div>
         </div>
     </div>
@@ -48,8 +48,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="page-title style1 col-xl-6 col-lg-8 col-md-10 text-center mb-5">
-                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">Why Choose Us?</h2>
-                <p class="fw-300 font-xsss lh-28 text-grey-500">We are the best online learning platform with ai-chat bot,ranking system.</p>
+                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">{% translate 'Why Choose Us?' %}</h2>
+                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'We are the best online learning platform with AI-model,VR and auto creation of poems.' %}</p>
             </div>
         </div>
         <div class="row">
@@ -63,8 +63,8 @@
                         ></path>
                     </svg>
                     <i class="feather-layers display1-size position-relative z-index text-warning"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">Blazing Performance</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">User friendly interface, easy to use and fast.</p>
+                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate 'Blazing Performance' %}</h2>
+                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'User friendly interface, easy to use and fast.' %}</p>
                 </div>
             </div>
             <div class="col-lg-4 arrow-right">
@@ -77,8 +77,8 @@
                         ></path>
                     </svg>
                     <i class="feather-lock display1-size position-relative z-index text-secondary"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">Free Updates</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">Auto update facility</p>
+                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate 'Free Updates' %}</h2>
+                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'Auto update facility' %}</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -91,8 +91,8 @@
                         ></path>
                     </svg>
                     <i class="feather-box display1-size position-relative z-index text-success"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">24/7 Supports</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">No need to worry,our system will handle your emergency cases.</p>
+                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate '24/7 Supports' %}</h2>
+                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'No need to worry,our system will handle your emergency cases.' %}</p>
                 </div>
             </div>
         </div>
@@ -103,8 +103,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="page-title style1 col-xl-6 col-lg-8 col-md-10 text-center mb-5">
-                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">Online Popular Course</h2>
-                <p class="fw-300 font-xsss lh-28 text-grey-500">History of China, Invention, Han dyansty, scholars</p>
+                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">{% translate 'Online Popular Course' %}</h2>
+                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'History of China, Invention, Han dyansty, scholars' %}</p>
             </div>
         </div>
 
@@ -116,7 +116,7 @@
                             <a href="{% url 'course:details' course.pk %}" class="video-bttn position-relative d-block"><img src="{{ course.photo.url }}" alt="image" class="w-100" /></a>
                         </div>
                         <div class="card-body pt-0">
-                            <span class="font-xsssss fw-700 pl-3 pr-3 lh-32 text-uppercase rounded-lg ls-2 alert-danger d-inline-block text-danger mr-1">Desinger</span>
+                            <span class="font-xsssss fw-700 pl-3 pr-3 lh-32 text-uppercase rounded-lg ls-2 alert-danger d-inline-block text-danger mr-1">{% translate 'Desinger' %}</span>
                             <span class="font-xss fw-700 pl-3 pr-3 ls-2 lh-32 d-inline-block text-success float-right"><span class="font-xsssss">$</span> 450</span>
                             <h4 class="fw-700 font-xss mt-3 lh-28 mt-0"><a href="{% url 'course:details' course.pk %}" class="text-dark text-grey-900">{{ course.title }} </a></h4>
                             <h6 class="font-xssss text-grey-500 fw-600 ml-0 mt-2">24 Lesson <span class="float-right mt-1 font-xssss text-grey-500">65%</span></h6>
@@ -131,7 +131,7 @@
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w10 mr-1 float-left" />
                                 <img src="{% static 'images/star-disable.png' %}" alt="star" class="w10 float-left mr-2" />
                             </div>
-                            <p class="review-link mt-0 font-xssss float-right mb-2 fw-500 text-grey-500 lh-3">2 customer review</p>
+                            <p class="review-link mt-0 font-xssss float-right mb-2 fw-500 text-grey-500 lh-3">{% translate '2 customer review' %}</p>
                         </div>
                     </div>
                 </div>
@@ -144,8 +144,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="page-title style1 col-xl-8 col-lg-8 col-md-10 text-center mb-5">
-                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">Are you Looking for Live Class ?</h2>
-                <p class="fw-300 font-xsss lh-28 text-grey-500">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dol ad minim veniam, quis nostrud exercitation</p>
+                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">{% translate 'Are you Looking for Live Class ?' %}</h2>
+                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dol ad minim veniam, quis nostrud exercitation</p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -298,7 +298,7 @@
                 <div class="card w-100 p-lg-5 p-4 rounded-xxl border-0" style="background-image: url('/static/images/subscribe.jpeg'); background-repeat: no-repeat; background-size: cover; min-height: 400px;">
                     <div class="row justify-content-center">
                         <div class="col-lg-10 text-center">
-                            <h2 class="fw-700 text-grey-900 display2-size display2-md-size lh-3 mb-3" style="margin-top: 50px;">Subscribe up to our newsletter</h2>
+                            <h2 class="fw-700 text-grey-900 display2-size display2-md-size lh-3 mb-3" style="margin-top: 50px;">{% translate 'Subscribe up to our newsletter' %}</h2>
                         </div>
                         <div class="col-lg-6 text-center mt-md-4 mb-3">
                             <div class="form-group icon-right-input style2-input mb-0">
