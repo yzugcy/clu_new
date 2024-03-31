@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:04+0800\n"
+"POT-Creation-Date: 2024-03-31 20:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cultch/settings.py:149
+#: cultch/settings.py:148 templates/base/footer.html:35
 msgid "English"
 msgstr ""
 
-#: cultch/settings.py:150
+#: cultch/settings.py:149 templates/base/footer.html:36
 msgid "Chinese"
 msgstr ""
 
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Bio"
 msgstr ""
 
-#: customauth/models/profile.py:23
+#: customauth/models/profile.py:23 templates/base/footer.html:56
 msgid "Address"
 msgstr ""
 
@@ -78,21 +78,74 @@ msgstr ""
 msgid "additional email address"
 msgstr ""
 
+#: templates/base/base.html:9
+msgid "CULTCH - Exploring Chinese Language & Culture"
+msgstr ""
+
+#: templates/base/footer.html:13 templates/base/footer.html:61
+msgid "99XQ+JXJ, Hanjiang District, Yangzhou, Yangzhou, Jiangsu, China, 225012"
+msgstr ""
+
+#: templates/base/footer.html:15
+msgid "support@mail.com"
+msgstr ""
+
+#: templates/base/footer.html:33
+msgid "Language"
+msgstr ""
+
+#: templates/base/footer.html:40
+msgid "Quick Access"
+msgstr ""
+
+#: templates/base/footer.html:42 templates/base/menu.html:16
+msgid "Timeline"
+msgstr "时间线"
+
+#: templates/base/footer.html:43
+msgid "Blog"
+msgstr ""
+
+#: templates/base/footer.html:44
+msgid "Feedback"
+msgstr ""
+
+#: templates/base/footer.html:48 templates/base/menu.html:18
+msgid "About"
+msgstr "关于"
+
+#: templates/base/footer.html:50
+msgid "FAQ"
+msgstr ""
+
+#: templates/base/footer.html:51
+msgid "Term of use"
+msgstr ""
+
+#: templates/base/footer.html:52
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/base/footer.html:58 templates/base/wrapper.html:37
+#: templates/virtualtour/details.html:194
+msgid "Yangzhou University"
+msgstr "扬州大学"
+
+#: templates/base/footer.html:69
+msgid "copyright. All rights reserved."
+msgstr ""
+
+#: templates/base/footer.html:72
+msgid "Design by "
+msgstr ""
+
 #: templates/base/menu.html:15
 msgid "Home"
 msgstr "家"
 
-#: templates/base/menu.html:16
-msgid "Timeline"
-msgstr "时间线"
-
 #: templates/base/menu.html:17
 msgid "Virtual Tours"
 msgstr "虚拟旅游"
-
-#: templates/base/menu.html:18
-msgid "About"
-msgstr "关于"
 
 #: templates/base/menu.html:19
 msgid "Contact"
@@ -118,9 +171,251 @@ msgstr "使用条款"
 msgid "PRIVACY POLICY"
 msgstr "隐私政策"
 
-#: templates/base/wrapper.html:37
-msgid "Yangzhou University"
-msgstr "扬州大学"
+#: templates/home.html:9
+msgid "Discover the Ancient Civilization of China."
+msgstr ""
+
+#: templates/home.html:10
+msgid "For only course you need to learn Chinese history"
+msgstr ""
+
+#: templates/home.html:25
+msgid "All Categories"
+msgstr ""
+
+#: templates/home.html:26
+msgid "literature"
+msgstr ""
+
+#: templates/home.html:27
+msgid "Art"
+msgstr ""
+
+#: templates/home.html:28
+msgid "History Science"
+msgstr ""
+
+#: templates/home.html:29
+msgid "Science and Technology"
+msgstr ""
+
+#: templates/home.html:30
+msgid "Philosophy"
+msgstr ""
+
+#: templates/home.html:41
+msgid "Popular Search :"
+msgstr ""
+
+#: templates/home.html:51
+msgid "Why Choose Us?"
+msgstr ""
+
+#: templates/home.html:52
+msgid ""
+"We are the best online learning platform with AI-model,VR and auto creation "
+"of poems."
+msgstr ""
+
+#: templates/home.html:66
+msgid "Blazing Performance"
+msgstr ""
+
+#: templates/home.html:67
+msgid "User friendly interface, easy to use and fast."
+msgstr ""
+
+#: templates/home.html:80
+msgid "Free Updates"
+msgstr ""
+
+#: templates/home.html:81
+msgid "Auto update facility"
+msgstr ""
+
+#: templates/home.html:94
+msgid "24/7 Supports"
+msgstr ""
+
+#: templates/home.html:95
+msgid "No need to worry,our system will handle your emergency cases."
+msgstr ""
+
+#: templates/home.html:106
+msgid "Online Popular Course"
+msgstr ""
+
+#: templates/home.html:107
+msgid "History of China, Invention, Han dyansty, scholars"
+msgstr ""
+
+#: templates/home.html:119
+msgid "Desinger"
+msgstr ""
+
+#: templates/home.html:134
+msgid "2 customer review"
+msgstr ""
+
+#: templates/home.html:147
+msgid "Are you Looking for Live Class ?"
+msgstr ""
+
+#: templates/home.html:301
+msgid "Subscribe up to our newsletter"
+msgstr ""
+
+#: templates/virtualtour/details.html:72
+msgid "Sound Off"
+msgstr ""
+
+#: templates/virtualtour/details.html:77
+msgid "Sound On"
+msgstr ""
+
+#: templates/virtualtour/details.html:82
+msgid "Coming Soon"
+msgstr ""
+
+#: templates/virtualtour/details.html:87
+msgid "Resources"
+msgstr ""
+
+#: templates/virtualtour/details.html:92
+msgid "Fullscreen Mode"
+msgstr ""
+
+#: templates/virtualtour/details.html:97
+msgid "Exit fullscreen Mode"
+msgstr ""
+
+#: templates/virtualtour/details.html:110
+msgid "Quality Settings: HD"
+msgstr ""
+
+#: templates/virtualtour/details.html:114
+msgid "Quality Settings: SD"
+msgstr ""
+
+#: templates/virtualtour/details.html:119
+msgid "Subtitles"
+msgstr ""
+
+#: templates/virtualtour/details.html:142
+msgid "Duration: {{ tour.duration }} mins"
+msgstr ""
+
+#: templates/virtualtour/details.html:171
+msgid "Loading..."
+msgstr ""
+
+#: templates/virtualtour/details.html:181
+msgid "Start"
+msgstr ""
+
+#: templates/virtualtour/details.html:199
+msgid "College of Information Engineering"
+msgstr ""
+
+#: templates/virtualtour/details.html:211
+msgid "WebGL check failed"
+msgstr ""
+
+#: templates/virtualtour/details.html:214
+msgid "To display a Tapestry in 3D we rely on"
+msgstr ""
+
+#: templates/virtualtour/details.html:215
+msgid "You can check if your browser is compatible on"
+msgstr ""
+
+#: templates/virtualtour/details.html:236
+msgid "Voices"
+msgstr ""
+
+#: templates/virtualtour/details.html:253
+msgid "Ibrahim Sidahmed"
+msgstr ""
+
+#: templates/virtualtour/details.html:254
+msgid "Village Resident"
+msgstr ""
+
+#: templates/virtualtour/details.html:267
+msgid "Jaffar Khidr"
+msgstr ""
+
+#: templates/virtualtour/details.html:268
+msgid "Construction Foreman"
+msgstr ""
+
+#: templates/virtualtour/details.html:281
+msgid "Mansour Al Hadari"
+msgstr ""
+
+#: templates/virtualtour/details.html:282
+msgid "Guide, guardian and builder"
+msgstr ""
+
+#: templates/virtualtour/details.html:299
+#: templates/virtualtour/details.html:376
+msgid "Read More"
+msgstr ""
+
+#: templates/virtualtour/details.html:300
+#: templates/virtualtour/details.html:377
+msgid "Read Less"
+msgstr ""
+
+#: templates/virtualtour/details.html:358
+msgid "Drag to Explore"
+msgstr ""
+
+#: templates/virtualtour/details.html:415
+msgid "Reset camera"
+msgstr ""
+
+#: templates/virtualtour/details.html:419
+msgid "Go back"
+msgstr ""
+
+#: templates/virtualtour/details.html:429
+msgid "Support Us!"
+msgstr ""
+
+#: templates/virtualtour/details.html:432
+msgid ""
+"Tapestry is brought to you by CyArk, a 501(c)(3) nonprofit organization "
+"committed to empowering connections with historic places."
+msgstr ""
+
+#: templates/virtualtour/details.html:435
+msgid "Donate"
+msgstr ""
+
+#: templates/virtualtour/details.html:440
+msgid "Want to Explore More?"
+msgstr ""
+
+#: templates/virtualtour/details.html:446
+msgid "Church of St. George"
+msgstr ""
+
+#: templates/virtualtour/details.html:447
+msgid "Home to the oldest surviving depiction of the Holy Land"
+msgstr ""
+
+#: templates/virtualtour/details.html:452
+msgid "Explore"
+msgstr ""
+
+#: templates/virtualtour/details.html:457
+msgid "Take our Survey!"
+msgstr ""
+
+#: templates/virtualtour/list.html:14
+msgid "Take a Tour Now"
+msgstr ""
 
 #: virtualtour/models.py:8
 msgid "Tour Title"
@@ -136,4 +431,12 @@ msgstr ""
 
 #: virtualtour/models.py:14
 msgid "Location"
+msgstr ""
+
+#: virtualtour/models.py:15
+msgid "Latitude"
+msgstr ""
+
+#: virtualtour/models.py:16
+msgid "Longitude"
 msgstr ""
