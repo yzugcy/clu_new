@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 20:06+0800\n"
+"POT-Creation-Date: 2024-03-31 23:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,425 +18,503 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cultch/settings.py:148 templates/base/footer.html:35
+#: .\cultch\settings.py:153
 msgid "English"
 msgstr ""
 
-#: cultch/settings.py:149 templates/base/footer.html:36
+#: .\cultch\settings.py:154
 msgid "Chinese"
 msgstr ""
 
-#: customauth/models/profile.py:15
+#: .\customauth\models\profile.py:15
 msgid "Name"
 msgstr ""
 
-#: customauth/models/profile.py:20
+#: .\customauth\models\profile.py:20
 msgid "Bio"
 msgstr ""
 
-#: customauth/models/profile.py:23 templates/base/footer.html:56
+#: .\customauth\models\profile.py:23
 msgid "Address"
 msgstr ""
 
-#: customauth/models/profile.py:26
+#: .\customauth\models\profile.py:26
 msgid "Date of Birth"
 msgstr ""
 
-#: customauth/models/user.py:41
+#: .\customauth\models\user.py:41
 msgid "Email Address"
 msgstr ""
 
-#: customauth/models/user.py:43
+#: .\customauth\models\user.py:44
 msgid "Staff Status"
 msgstr ""
 
-#: customauth/models/user.py:44
+#: .\customauth\models\user.py:45
 msgid "Active Status"
 msgstr ""
 
-#: customauth/models/user.py:45
+#: .\customauth\models\user.py:46
 msgid "accepted terms"
 msgstr ""
 
-#: customauth/models/user.py:46
+#: .\customauth\models\user.py:47
 msgid "terms read"
 msgstr ""
 
-#: customauth/models/user.py:47
+#: .\customauth\models\user.py:48
 msgid "Date Joined"
 msgstr ""
 
-#: customauth/models/user.py:48
+#: .\customauth\models\user.py:49
 msgid "Last Updated"
 msgstr ""
 
-#: customauth/models/user.py:51
+#: .\customauth\models\user.py:52
 msgid "email token"
 msgstr ""
 
-#: customauth/models/user.py:54
+#: .\customauth\models\user.py:55
 msgid "additional email address"
 msgstr ""
 
-#: templates/base/base.html:9
-msgid "CULTCH - Exploring Chinese Language & Culture"
-msgstr ""
-
-#: templates/base/footer.html:13 templates/base/footer.html:61
-msgid "99XQ+JXJ, Hanjiang District, Yangzhou, Yangzhou, Jiangsu, China, 225012"
-msgstr ""
-
-#: templates/base/footer.html:15
-msgid "support@mail.com"
-msgstr ""
-
-#: templates/base/footer.html:33
-msgid "Language"
-msgstr ""
-
-#: templates/base/footer.html:40
-msgid "Quick Access"
-msgstr ""
-
-#: templates/base/footer.html:42 templates/base/menu.html:16
-msgid "Timeline"
-msgstr ""
-
-#: templates/base/footer.html:43
-msgid "Blog"
-msgstr ""
-
-#: templates/base/footer.html:44
-msgid "Feedback"
-msgstr ""
-
-#: templates/base/footer.html:48 templates/base/menu.html:18
-msgid "About"
-msgstr ""
-
-#: templates/base/footer.html:50
-msgid "FAQ"
-msgstr ""
-
-#: templates/base/footer.html:51
-msgid "Term of use"
-msgstr ""
-
-#: templates/base/footer.html:52
-msgid "Privacy Policy"
-msgstr ""
-
-#: templates/base/footer.html:58 templates/base/wrapper.html:37
-#: templates/virtualtour/details.html:194
-msgid "Yangzhou University"
-msgstr ""
-
-#: templates/base/footer.html:69
-msgid "copyright. All rights reserved."
-msgstr ""
-
-#: templates/base/footer.html:72
-msgid "Design by "
-msgstr ""
-
-#: templates/base/menu.html:15
+#: .\templates\base\menu.html:15
 msgid "Home"
 msgstr ""
 
-#: templates/base/menu.html:17
+#: .\templates\base\menu.html:16
+msgid "Travel Through Millennium"
+msgstr ""
+
+#: .\templates\base\menu.html:18
+msgid "Dynasty Songs"
+msgstr ""
+
+#: .\templates\base\menu.html:19
+msgid "A Funny Game"
+msgstr ""
+
+#: .\templates\base\menu.html:22
+msgid "Immersive"
+msgstr ""
+
+#: .\templates\base\menu.html:24
 msgid "Virtual Tours"
 msgstr ""
 
-#: templates/base/menu.html:19
-msgid "Contact"
+#: .\templates\base\menu.html:25
+msgid "Trip Videos"
 msgstr ""
 
-#: templates/base/menu.html:24
+#: .\templates\base\menu.html:28
+msgid "Read Classics"
+msgstr ""
+
+#: .\templates\base\menu.html:30
+msgid "Famous Sayings"
+msgstr ""
+
+#: .\templates\base\menu.html:31
+#: .\templates\readclassic\class_sharing_details.html:52
+msgid "Classic Sharing"
+msgstr ""
+
+#: .\templates\base\menu.html:33
+msgid "Dialogue with sages"
+msgstr ""
+
+#: .\templates\base\menu.html:34
+msgid "East to West"
+msgstr ""
+
+#: .\templates\base\menu.html:41
 msgid "Login"
 msgstr ""
 
-#: templates/base/menu.html:25
+#: .\templates\base\menu.html:42
 msgid "Register"
 msgstr ""
 
-#: templates/base/wrapper.html:16 templates/base/wrapper.html:40
+#: .\templates\base\wrapper.html:16
 msgid "My Account"
 msgstr ""
 
-#: templates/base/wrapper.html:22
+#: .\templates\base\wrapper.html:22
 msgid "TERMS OF USE"
 msgstr ""
 
-#: templates/base/wrapper.html:23
+#: .\templates\base\wrapper.html:23
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: templates/home.html:9
-msgid "Discover the Ancient Civilization of China."
+#: .\templates\base\wrapper.html:37
+msgid "China"
 msgstr ""
 
-#: templates/home.html:10
-msgid "For only course you need to learn Chinese history"
+#: .\templates\base\wrapper.html:42
+msgid "Please Login"
 msgstr ""
 
-#: templates/home.html:25
-msgid "All Categories"
+#: .\templates\history\dynasty_song.html:10
+msgid "The history of dynasties sets sail from here"
 msgstr ""
 
-#: templates/home.html:26
-msgid "literature"
+#: .\templates\history\dynasty_song.html:21
+msgid "Dynasties Introduction"
 msgstr ""
 
-#: templates/home.html:27
-msgid "Art"
-msgstr ""
-
-#: templates/home.html:28
-msgid "History Science"
-msgstr ""
-
-#: templates/home.html:29
-msgid "Science and Technology"
-msgstr ""
-
-#: templates/home.html:30
-msgid "Philosophy"
-msgstr ""
-
-#: templates/home.html:41
-msgid "Popular Search :"
-msgstr ""
-
-#: templates/home.html:51
-msgid "Why Choose Us?"
-msgstr ""
-
-#: templates/home.html:52
+#: .\templates\history\dynasty_song.html:27
 msgid ""
-"We are the best online learning platform with AI-model,VR and auto creation "
-"of poems."
+"The Tang Dynasty is considered a golden age of Chinese arts and culture. In "
+"power from 618 to 906 A.D., Tang China attracted an international reputation "
+"that spilled out of its cities and, through the practice of Buddhism, spread "
+"its culture across much of Asia."
 msgstr ""
 
-#: templates/home.html:66
-msgid "Blazing Performance"
-msgstr ""
-
-#: templates/home.html:67
-msgid "User friendly interface, easy to use and fast."
-msgstr ""
-
-#: templates/home.html:80
-msgid "Free Updates"
-msgstr ""
-
-#: templates/home.html:81
-msgid "Auto update facility"
-msgstr ""
-
-#: templates/home.html:94
-msgid "24/7 Supports"
-msgstr ""
-
-#: templates/home.html:95
-msgid "No need to worry,our system will handle your emergency cases."
-msgstr ""
-
-#: templates/home.html:106
-msgid "Online Popular Course"
-msgstr ""
-
-#: templates/home.html:107
-msgid "History of China, Invention, Han dyansty, scholars"
-msgstr ""
-
-#: templates/home.html:119
-msgid "Desinger"
-msgstr ""
-
-#: templates/home.html:134
-msgid "2 customer review"
-msgstr ""
-
-#: templates/home.html:147
-msgid "Are you Looking for Live Class ?"
-msgstr ""
-
-#: templates/home.html:301
-msgid "Subscribe up to our newsletter"
-msgstr ""
-
-#: templates/virtualtour/details.html:72
-msgid "Sound Off"
-msgstr ""
-
-#: templates/virtualtour/details.html:77
-msgid "Sound On"
-msgstr ""
-
-#: templates/virtualtour/details.html:82
-msgid "Coming Soon"
-msgstr ""
-
-#: templates/virtualtour/details.html:87
-msgid "Resources"
-msgstr ""
-
-#: templates/virtualtour/details.html:92
-msgid "Fullscreen Mode"
-msgstr ""
-
-#: templates/virtualtour/details.html:97
-msgid "Exit fullscreen Mode"
-msgstr ""
-
-#: templates/virtualtour/details.html:110
-msgid "Quality Settings: HD"
-msgstr ""
-
-#: templates/virtualtour/details.html:114
-msgid "Quality Settings: SD"
-msgstr ""
-
-#: templates/virtualtour/details.html:119
-msgid "Subtitles"
-msgstr ""
-
-#: templates/virtualtour/details.html:142
-msgid "Duration: {{ tour.duration }} mins"
-msgstr ""
-
-#: templates/virtualtour/details.html:171
-msgid "Loading..."
-msgstr ""
-
-#: templates/virtualtour/details.html:181
-msgid "Start"
-msgstr ""
-
-#: templates/virtualtour/details.html:199
-msgid "College of Information Engineering"
-msgstr ""
-
-#: templates/virtualtour/details.html:211
-msgid "WebGL check failed"
-msgstr ""
-
-#: templates/virtualtour/details.html:214
-msgid "To display a Tapestry in 3D we rely on"
-msgstr ""
-
-#: templates/virtualtour/details.html:215
-msgid "You can check if your browser is compatible on"
-msgstr ""
-
-#: templates/virtualtour/details.html:236
-msgid "Voices"
-msgstr ""
-
-#: templates/virtualtour/details.html:253
-msgid "Ibrahim Sidahmed"
-msgstr ""
-
-#: templates/virtualtour/details.html:254
-msgid "Village Resident"
-msgstr ""
-
-#: templates/virtualtour/details.html:267
-msgid "Jaffar Khidr"
-msgstr ""
-
-#: templates/virtualtour/details.html:268
-msgid "Construction Foreman"
-msgstr ""
-
-#: templates/virtualtour/details.html:281
-msgid "Mansour Al Hadari"
-msgstr ""
-
-#: templates/virtualtour/details.html:282
-msgid "Guide, guardian and builder"
-msgstr ""
-
-#: templates/virtualtour/details.html:299
-#: templates/virtualtour/details.html:376
-msgid "Read More"
-msgstr ""
-
-#: templates/virtualtour/details.html:300
-#: templates/virtualtour/details.html:377
-msgid "Read Less"
-msgstr ""
-
-#: templates/virtualtour/details.html:358
-msgid "Drag to Explore"
-msgstr ""
-
-#: templates/virtualtour/details.html:415
-msgid "Reset camera"
-msgstr ""
-
-#: templates/virtualtour/details.html:419
-msgid "Go back"
-msgstr ""
-
-#: templates/virtualtour/details.html:429
-msgid "Support Us!"
-msgstr ""
-
-#: templates/virtualtour/details.html:432
+#: .\templates\history\dynasty_song.html:35
 msgid ""
-"Tapestry is brought to you by CyArk, a 501(c)(3) nonprofit organization "
-"committed to empowering connections with historic places."
+"The Shang Dynasty is the earliest ruling dynasty of China to be established "
+"in recorded history, though other dynasties predated it. The Shang ruled "
+"from 1600 to 1046 B.C. and heralded the Bronze Age in China. They were known "
+"for their advances in math, astronomy, artwork and military technology."
 msgstr ""
 
-#: templates/virtualtour/details.html:435
-msgid "Donate"
+#: .\templates\history\dynasty_song.html:43
+msgid ""
+"The Ming Dynasty ruled China from A.D. 1368 to 1644, during which China’s "
+"population would double. Known for its trade expansion to the outside world "
+"that established cultural ties with the West, the Ming Dynasty is also "
+"remembered for its drama, literature and world-renowned porcelain."
 msgstr ""
 
-#: templates/virtualtour/details.html:440
-msgid "Want to Explore More?"
+#: .\templates\history\dynasty_song.html:51
+msgid ""
+"The Han Dynasty ruled China from 206 B.C. to 220 A.D. and was the second "
+"imperial dynasty of China. Though tainted by deadly dramas within the royal "
+"court, it is also known for its promotion of Confucianism as the state "
+"religion and opening the Silk Road trade route to Europe, permanently "
+"altering the course of Chinese history. Han Dynasty art and inventions like "
+"paper still influence the world today."
 msgstr ""
 
-#: templates/virtualtour/details.html:446
-msgid "Church of St. George"
+#: .\templates\history\dynasty_song.html:59
+msgid ""
+"The Qin Dynasty established the first empire in China, starting with efforts "
+"in 230 B.C., during which the Qin leaders engulfed six Zhou Dynasty states. "
+"Their reign over Imperial China existed only briefly—from 221 to 206 B.C.—"
+"but the Qin Dynasty had a lasting cultural impact on the dynasties that "
+"followed."
 msgstr ""
 
-#: templates/virtualtour/details.html:447
-msgid "Home to the oldest surviving depiction of the Holy Land"
+#: .\templates\history\dynasty_song.html:77
+msgid "The Dynasty song"
 msgstr ""
 
-#: templates/virtualtour/details.html:452
-msgid "Explore"
+#: .\templates\history\dynasty_song.html:112
+msgid "Sing the Dynasty song"
 msgstr ""
 
-#: templates/virtualtour/details.html:457
-msgid "Take our Survey!"
+#: .\templates\home.html:10
+msgid ""
+"Here, you will learn about China's millennium old cultural heritage, such as "
+"stories, philosophy, scenic spots"
 msgstr ""
 
-#: templates/virtualtour/list.html:14
-msgid "Take a Tour Now"
+#: .\templates\home.html:52
+msgid "Come here, you can view."
 msgstr ""
 
-#: virtualtour/models.py:8
+#: .\templates\readclassic\Classic_Sharing.html:19
+msgid "Share List"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid "id"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid "source"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid "category"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid " sharing author"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid "time"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:22
+msgid "operation"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:55
+msgid "Share Time"
+msgstr ""
+
+#: .\templates\readclassic\Classic_Sharing.html:89
+msgid "Note: Only support (.jpeg|.jpg|.bmp|.png) type"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:15
+msgid "Video"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:28
+msgid "Share One"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:56
+msgid "Share Two"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:84
+msgid "Share Three"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:104
+msgid "Popular Sayings"
+msgstr ""
+
+#: .\templates\readclassic\Learn_Famous_Sayings.html:116
+msgid "Popular Videos"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:52
+msgid "Details"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:72
+msgid "like"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:110
+msgid "Comment List"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:117
+msgid "delete"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:125
+msgid "Have no comments now, you can give you comments"
+msgstr ""
+
+#: .\templates\readclassic\class_sharing_details.html:142
+msgid "Comment and Share"
+msgstr ""
+
+#: .\templates\virtualtour\sharevideo.html:17
+msgid "欣赏中国大好河山，品味千年传统文化"
+msgstr ""
+
+#: .\templates\virtualtour\sharevideo.html:100
+msgid "Photos"
+msgstr ""
+
+#: .\templates\virtualtour\sharevideo.html:126
+msgid "Videos"
+msgstr ""
+
+#: .\templates\west\west.html:94 .\templates\west\west.html:134
+#: .\templates\west\west.html:172 .\templates\west\west.html:209
+#: .\templates\west\west.html:246
+msgid "cilck here, learn more about the book"
+msgstr ""
+
+#: .\templates\west\west.html:100
+msgid ""
+"This book is an adaptation of Shi Jingqian  doctoral thesis. Although the "
+"book was written relatively early, I personally believe that it is its "
+"pinnacle, even directly following Pursuing Modern China. As the grandfather "
+"of Cao Xueqin, Cao Yin is a man who can eat both Manchu and Han.He is in "
+"charge of Jiangning Weaving, and this position is not a national minister, "
+"but a vassal of the emperor. In fact, he was also the ears and eyes of "
+"Kangxi in Jiangnan, and everything he saw and heard had to be seen and heard "
+"by Kangxi through folding.And he was also very good at being a person. When "
+"Kangxi went to Jiangnan, he arranged everything properly every time, so much "
+"so that Kangxi praised him highly.And behind these proper actions lies a "
+"huge deficit. Although Cao Yin is very good at being a person, he cannot "
+"solve this problem, which is also an important reason for the failure of the "
+"Cao family.Shi Jingqian saw a large amount of information about Cao Yin and "
+"Kangxi in Taiwan, which enabled him to complete this classic.The books "
+"written by Shi Jingqian have a somewhat prose like flavor, and many people "
+"like such writing. This book is no exception.Who does not love books that "
+"are thought-provoking and beautifully written?"
+msgstr ""
+
+#: .\templates\west\west.html:103
+msgid "-- Jinqian Shi《Ts'ao Yin & The K'ang-Hsi Emperor》"
+msgstr ""
+
+#: .\templates\west\west.html:140
+msgid ""
+"The author's last study of Tang Dynasty poetry is also his best written one. "
+"It can be seen that with the experience of the previous books, this one can "
+"be said to be more adept at various metaphors. The research on late Tang "
+"poetry was not very developed, but the author did not step out of the scope "
+"of Li, Du, and Wen, and still wandered within their circles. But "
+"fortunately, with her unique perspective and a 4-year-old Chinese wife who "
+"can write poetry, her works are still considered top-notch even compared to "
+"those of Chinese scholars."
+msgstr ""
+
+#: .\templates\west\west.html:143
+msgid "-- Yuwen Suoan《The Late Tang》"
+msgstr ""
+
+#: .\templates\west\west.html:178
+msgid ""
+"This is a book about the study of pirates near Macau and Guangzhou, and it "
+"is also an unparalleled book in later generations. This book is so authentic "
+"that many later people believed that Lilius was posing for filming.In the "
+"book, the author provides a large number of photos, including a group photo "
+"of the female pirate Li Caishan and her subordinates, a group photo of the "
+"author and the pirate leader, and various pirate weapons and equipment. "
+"Although these photos may be somewhat blurry due to age, they are truly "
+"shocking and speechless. In the book, the author provides detailed data on "
+"pirate robbery from 1921 to 1929, and provides a complete description of the "
+"entire process of pirate robbery in text: how pirates boarded ships, how the "
+"people on board counterattacked, how British warships provided "
+"reinforcements, and so on. This is completely a complete documentary. Of "
+"course, sticking to the scene of pirate robbery does not solve the "
+"fundamental problem. The author takes readers to see more scenes of pirate "
+"life, to see pirate families, and to see their mothers and children. The "
+"transition between robbery conflict and family tranquility naturally prompts "
+"readers to ponder the reasons behind it."
+msgstr ""
+
+#: .\templates\west\west.html:180
+msgid "--Lilius《 Modern South China Pirate Chronicle》"
+msgstr ""
+
+#: .\templates\west\west.html:215
+msgid ""
+"Also translated as The Decline of the Chinese Empire. Accustomed to reading "
+"the chronicles of modern Chinese history, looking at this modern history "
+"book will naturally give you a refreshing feeling. So, if it's not based on "
+"time, where is the focus of the entire book? The chronological style is "
+"based on time, while the biographical style is based on characters. And this "
+"book is based on three social groups, namely farmers, gentry, and merchants. "
+"The fundamental purpose of writing in this way is still to showcase the "
+"undercurrents within society. Talking about farmers, revealing land and "
+"production relations, as well as the impact on society, emphasizing the role "
+"of literati groups and the elite class in society. Speaking of merchants, "
+"one naturally wants to find the driving force of the economy on society and "
+"the emergence of capitalism. And these three are closely linked together, "
+"and on top of them, Chinese modern history is derived. Readers will "
+"naturally have different feelings about the modern history written in this "
+"way."
+msgstr ""
+
+#: .\templates\west\west.html:217
+msgid "--Wei Feide《 The Decline of Chinese Imperial System》"
+msgstr ""
+
+#: .\templates\west\west.html:252
+msgid ""
+"The old China collapsed at this time, and the new China rose and expanded in "
+"its place. In general understanding, the dark era before the Sui and Tang "
+"dynasties was the beginning of the sinicization of East Asian countries. "
+"However,thischaotic era was not at all dark. In some aspects, we can even "
+"say that this was an extremely rich and prosperous era, which not only laid "
+"the foundation for the later internationally colored Sui and Tang cultures, "
+"but also indirectly had a profound impact on ancient Japanese culture."
+msgstr ""
+
+#: .\templates\west\west.html:254
+msgid "--Kawamoto Fangzhao《The Collapse and Expansion of China》"
+msgstr ""
+
+#: .\templates\west\west.html:273
+msgid "authors' countries"
+msgstr ""
+
+#: .\templates\west\west.html:275
+msgid "USA"
+msgstr ""
+
+#: .\templates\west\west.html:276
+msgid "UK"
+msgstr ""
+
+#: .\templates\west\west.html:277
+msgid "JAPAN"
+msgstr ""
+
+#: .\templates\west\west.html:290
+msgid "C 1"
+msgstr ""
+
+#: .\templates\west\west.html:293
+msgid "C 2"
+msgstr ""
+
+#: .\templates\west\west.html:296
+msgid "C 3"
+msgstr ""
+
+#: .\templates\west\west.html:305
+msgid "I like The Collapse and Expansion of China"
+msgstr ""
+
+#: .\templates\west\west.html:306
+msgid ""
+"Because it can help me know more about the collapse and expansion of China."
+msgstr ""
+
+#: .\templates\west\west.html:312
+msgid "I like Wei Feide"
+msgstr ""
+
+#: .\templates\west\west.html:313
+msgid "Because he is famous for his books about china."
+msgstr ""
+
+#: .\templates\west\west.html:317
+msgid "I like Modern South China Pirate Chronicle"
+msgstr ""
+
+#: .\templates\west\west.html:318
+msgid "Because it really let me know what happen in that time of China."
+msgstr ""
+
+#: .\templates\west\west.html:325
+msgid "SOURCE"
+msgstr ""
+
+#: .\templates\west\west.html:327
+msgid "Baidu Baike"
+msgstr ""
+
+#: .\templates\west\west.html:328
+msgid "Douban"
+msgstr ""
+
+#: .\virtualtour\models.py:8
 msgid "Tour Title"
 msgstr ""
 
-#: virtualtour/models.py:12
+#: .\virtualtour\models.py:12
 msgid "Duration in minutes"
 msgstr ""
 
-#: virtualtour/models.py:13
+#: .\virtualtour\models.py:13
 msgid "Scenes"
 msgstr ""
 
-#: virtualtour/models.py:14
+#: .\virtualtour\models.py:14
 msgid "Location"
 msgstr ""
 
-#: virtualtour/models.py:15
+#: .\virtualtour\models.py:15
 msgid "Latitude"
 msgstr ""
 
-#: virtualtour/models.py:16
+#: .\virtualtour\models.py:16
 msgid "Longitude"
 msgstr ""

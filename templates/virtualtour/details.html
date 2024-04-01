@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    {% load static i18n %}
+    {% load static %}
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1" />
@@ -69,32 +69,32 @@
                 <div id="buttons" class="topNavButtons">
                     <button tabindex="0" class="navIconBg" id="navMute" aria-label="Mute sound">
                         <img class="navIcons" src="{% static 'ui-elements/settings_bar/mute.png' %}" alt="mute navigation icon" />
-                        <div class="navToolTip">{% translate 'Sound Off' %}</div>
+                        <div class="navToolTip">Sound Off</div>
                     </button>
 
                     <button tabindex="0" class="navIconBg" id="navUnmute" aria-label="Unmute sound" style="display: none;">
                         <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/unmute.png" alt="unmute navigation icon" />
-                        <div class="navToolTip">{% translate 'Sound On' %}</div>
+                        <div class="navToolTip">Sound On</div>
                     </button>
 
                     <button tabindex="0" class="navIconBg navIconDisabled" aria-label="Share button disabled coming soon" style="display: none;">
                         <img class="navIcons shareIcon" id="shareIcon" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/share.png" alt="share navigation icon" />
-                        <div class="navToolTip">{% translate 'Coming Soon' %}</div>
+                        <div class="navToolTip">Coming Soon</div>
                     </button>
 
                     <button tabindex="0" class="navIconBg" id="resourcesIcon" aria-label="Resources">
                         <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/resources.png" alt="resources navigation icon" />
-                        <div class="navToolTip">{% translate 'Resources' %}</div>
+                        <div class="navToolTip">Resources</div>
                     </button>
 
                     <button tabindex="0" class="navIconBg" id="fullScreenIcon" aria-label="Fullscreen Mode">
                         <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/full_screen.png" alt="Fullscreen Mode navigation icon" />
-                        <div class="navToolTip" id="fullscreenTooltip">{% translate 'Fullscreen Mode' %}</div>
+                        <div class="navToolTip" id="fullscreenTooltip">Fullscreen Mode</div>
                     </button>
 
                     <button tabindex="0" class="navIconBg" id="exitFullScreenIcon" aria-label="Fullscreen Mode" style="display: none;">
                         <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/full_screen_exit.png" alt="exit Fullscreen Mode navigation icon" />
-                        <div class="navToolTip" id="fullscreenTooltip">{% translate 'Exit fullscreen Mode' %}</div>
+                        <div class="navToolTip" id="fullscreenTooltip">Exit fullscreen Mode</div>
                     </button>
 
                     <!--
@@ -107,16 +107,16 @@
                     <div id="additionalIcons" style="display: none;">
                         <button tabindex="0" class="navIconBg" id="navHD" aria-label="Toggle between Quality Settings">
                             <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/hd.png" alt="HD navigation icon" />
-                            <div class="navToolTip">{% translate 'Quality Settings: HD' %}</div>
+                            <div class="navToolTip">Quality Settings: HD</div>
                         </button>
                         <button tabindex="0" class="navIconBg" id="navSD" aria-label="Toggle between Quality Settings" style="display: none;">
                             <img class="navIcons" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/sd.png" alt="SD navigation icon" />
-                            <div class="navToolTip">{% translate 'Quality Settings: SD' %}</div>
+                            <div class="navToolTip">Quality Settings: SD</div>
                         </button>
 
                         <button tabindex="0" class="navIconBg" id="ccIconBg" aria-label="Toggle Subtitles">
                             <img class="navIcons" id="ccIcon" style="filter: opacity(1);" src="https://tapestrystorage.blob.core.windows.net/ui-elements/settings_bar/cc.png" alt="subtitles navigation icon" />
-                            <div class="navToolTip">{% translate 'Subtitles' %}</div>
+                            <div class="navToolTip">Subtitles</div>
                         </button>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="sOverlay_bg" id="overlay_bg"></div>
                 <div class="sInnerGroup" id="sInnerGroup">
                     <div class="oInfoBubbles">
-                        <div class="oInfoBubble">{% translate 'Duration: {{ tour.duration }} mins' %}<span id="oTourDuration"></span></div>
+                        <div class="oInfoBubble">Duration: {{ tour.duration }} mins<span id="oTourDuration"></span></div>
                         <div class="oInfoBubble">{{ tour.scenes }} Scenes</div>
                     </div>
                     <div class="spTextGroup">
@@ -168,7 +168,7 @@
                                 <div id="t_loadingBar" class="t_loadingBar"></div>
                                 <div id="t_loadingBarFill" class="t_loadingBarFill"></div>
                                 <div class="t_loadingBar_text unselectable" id="t_loadingBar_text">
-                                    {% translate 'Loading...' %}
+                                    Loading...
                                 </div>
                             </div>
 
@@ -178,7 +178,7 @@
                                     class="bStartExperience unselectable"
                                     id="bStartExperience"
                                 >
-                                {% translate 'Start' %}
+                                    Start
                                 </button>
                             </div>
                         </div>
@@ -191,12 +191,12 @@
                             <div class="sPartnersLogoGroup" id="sPartnersLogoGroup">
                                 <a class="sPartnerLogo" aria-label="Partner logo, click to Yangzhou University website " href="https://www.yzu.edu.cn/" target="_blank">
                                     <img src="{% static 'images/yzu.jpeg' %}" alt="Yangzhou University" />
-                                    <div class="sPartnerTooltip">{% translate 'Yangzhou University' %}</div>
+                                    <div class="sPartnerTooltip">Yangzhou University</div>
                                 </a>
 
                                 <a class="sPartnerLogo" aria-label="Partner logo, click to visit College of Information Engineering website " href="http://xxgcxy.yzu.edu.cn/en/" target="_blank">
                                     <img src="http://xxgcxy.yzu.edu.cn/en/images/logo.png" alt="College of Information Engineering" />
-                                    <div class="sPartnerTooltip">{% translate 'College of Information Engineering' %}</div>
+                                    <div class="sPartnerTooltip">College of Information Engineering</div>
                                 </a>
                             </div>
                         </div>
@@ -208,11 +208,11 @@
             <div class="errorOverlay_bg" id="errorOverlay_bg"></div>
             <div class="errorTextParent" id="errorTextParent">
                 <div class="errorTitle" id="errorTitle">
-                    {% translate 'WebGL check failed' %}
+                    WebGL check failed
                 </div>
                 <div class="errorText" id="errorText">
-                    {% translate 'To display a Tapestry in 3D we rely on' %}<a href="https://en.wikipedia.org/wiki/WebGL">WebGL</a>, a standard rendering library in most modern browsers. Your browser appears to be incompatible or WebGL has been disabled.
-                    {% translate 'You can check if your browser is compatible on' %}<a href="https://get.webgl.org/">https://get.webgl.org/</a> or please refer to your browser's documentation to enable WebGL.
+                    To display a Tapestry in 3D we rely on <a href="https://en.wikipedia.org/wiki/WebGL">WebGL</a>, a standard rendering library in most modern browsers. Your browser appears to be incompatible or WebGL has been disabled.
+                    You can check if your browser is compatible on <a href="https://get.webgl.org/">https://get.webgl.org/</a> or please refer to your browser's documentation to enable WebGL.
                 </div>
             </div>
         </div>
@@ -233,7 +233,7 @@
                     </div>
 
                     <div class="oLocalVoicesGroup">
-                        <div class="oLocalTitle">{% translate 'Voices' %}</div>
+                        <div class="oLocalTitle">Voices</div>
 
                         <button aria-hidden="true" class="rSettingsButton navIconBg acc_overviewPages" id="roSettingsButton">
                             <img aria-hidden="true" class="rButtonImg acc_overviewPages" src="https://tapestrystorage.blob.core.windows.net/ui-elements/mobile/mobile_settings.svg" />
@@ -250,8 +250,8 @@
                                         <div class="oLVRing ping rounded" id="oLVring_1"></div>
                                     </div>
                                     <div class="oLocalVoiceTextGroup" id="oLVT_1">
-                                        <div class="oLocalVoiceName">{% translate 'Ibrahim Sidahmed' %}</div>
-                                        <div class="oLocalVoiceName">{% translate 'Village Resident' %}</div>
+                                        <div class="oLocalVoiceName">Ibrahim Sidahmed</div>
+                                        <div class="oLocalVoiceName">Village Resident</div>
                                     </div>
                                 </button>
                             </div>
@@ -264,8 +264,8 @@
                                         <div class="oLVRing ping rounded" id="oLVring_2"></div>
                                     </div>
                                     <div class="oLocalVoiceTextGroup" id="oLVT_2">
-                                        <div class="oLocalVoiceName">{% translate 'Jaffar Khidr' %}</div>
-                                        <div class="oLocalVoiceName">{% translate 'Construction Foreman' %}</div>
+                                        <div class="oLocalVoiceName">Jaffar Khidr</div>
+                                        <div class="oLocalVoiceName">Construction Foreman</div>
                                     </div>
                                 </button>
                             </div>
@@ -278,8 +278,8 @@
                                         <div class="oLVRing ping rounded" id="oLVring_3"></div>
                                     </div>
                                     <div class="oLocalVoiceTextGroup" id="oLVT_3">
-                                        <div class="oLocalVoiceName">{% translate 'Mansour Al Hadari' %}</div>
-                                        <div class="oLocalVoiceName">{% translate 'Guide, guardian and builder' %}</div>
+                                        <div class="oLocalVoiceName">Mansour Al Hadari</div>
+                                        <div class="oLocalVoiceName">Guide, guardian and builder</div>
                                     </div>
                                 </button>
                             </div>
@@ -296,8 +296,8 @@
                 <h1 aria-hidden="true" class="title unselectable acc_scenePages" id="title"></h1>
                 <div class="tTextParent">
                     <div aria-hidden="false" class="tDescription unselectable" id="tDescription"></div>
-                    <button aria-hidden="true" class="tReadMore unselectable acc_scenePages" id="tReadMore">{% translate 'Read More' %}</button>
-                    <button aria-hidden="true" class="tReadMore tReadLess unselectable acc_scenePages" id="tReadLess">{% translate 'Read Less' %}</button>
+                    <button aria-hidden="true" class="tReadMore unselectable acc_scenePages" id="tReadMore">Read More</button>
+                    <button aria-hidden="true" class="tReadMore tReadLess unselectable acc_scenePages" id="tReadLess">Read Less</button>
                 </div>
             </div>
 
@@ -355,7 +355,7 @@
 
             <!--Set the display none-->
             <div class="hideScrollBoxParent" id="hideScrollBoxParent">
-                <div class="hideScrollBox" id="hideScrollBox">{% translate 'Drag to Explore' %}</div>
+                <div class="hideScrollBox" id="hideScrollBox">Drag to Explore</div>
             </div>
         </div>
         <div aria-hidden="true" id="playpenScene">
@@ -373,8 +373,8 @@
                     <audio id="audioHighlight"></audio>
                     <div class="playpenInfo-Desc" id="playpenInfo-Desc"></div>
                     <div id="playpenInfo-DescButtonGroup">
-                        <button aria-hidden="true" class="pReadMore unselectable" id="pReadMore">{% translate 'Read More' %}</button>
-                        <button aria-hidden="true" class="pReadMore pReadLess unselectable" id="pReadLess">{% translate 'Read Less' %}</button>
+                        <button aria-hidden="true" class="pReadMore unselectable" id="pReadMore">Read More</button>
+                        <button aria-hidden="true" class="pReadMore pReadLess unselectable" id="pReadLess">Read Less</button>
                     </div>
                 </div>
             </div>
@@ -412,11 +412,11 @@
                 <div class="ppBottomCenterUI" id="ppBottomCenterUI">
                     <button aria-hidden="true" tabindex="-1" class="ppResetButton ppButton acc_playpens" id="ppResetButton">
                         <img class="ppButtonImg" id="" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/playpen_restart.svg" alt="Reset button, Reposition the camera to the starting point" />
-                        <div class="ppNavToolTip">{% translate 'Reset camera' %}</div>
+                        <div class="ppNavToolTip">Reset camera</div>
                     </button>
                     <button aria-hidden="true" tabindex="-1" class="ppExitButton ppButton acc_playpens" id="ppExitButton">
                         <img class="ppButtonImg" id="" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/playpen_exit.svg" alt="Exit button exit the playpen to go back to the tour" />
-                        <div class="ppNavToolTip">{% translate 'Go back' %}</div>
+                        <div class="ppNavToolTip">Go back</div>
                     </button>
                 </div>
             </div>
@@ -426,35 +426,35 @@
                 <div class="gridGroup" id="gridGroup">
                     <div class="supportGroup">
                         <div class="supportTitle">
-                            {% translate 'Support Us!' %}
+                            Support Us!
                         </div>
                         <div class="supportText">
-                            {% translate 'Tapestry is brought to you by CyArk, a 501(c)(3) nonprofit organization committed to empowering connections with historic places.' %}
+                            Tapestry is brought to you by CyArk, a 501(c)(3) nonprofit organization committed to empowering connections with historic places.
                         </div>
                         <button class="supportButton" onclick="window.open('https://cyark.org/donate');">
-                            {% translate 'Donate' %}
+                            Donate
                         </button>
                     </div>
                     <div class="exploreGroup">
                         <div class="exploreTitle">
-                            {% translate 'Want to Explore More?' %}
+                            Want to Explore More?
                         </div>
                         <div class="exploreImgGroup">
                             <div class="exploreImg_Group">
                                 <img class="exploreImg_img" src="https://tapestrystorage.blob.core.windows.net/madaba-data/multimedia/madaba_splash.jpg" alt="An image of Cliff Palace at sunset with golden light." />
                                 <div class="exploreImg_textGroup">
-                                    <div class="exploreImg_title">{% translate 'Church of St. George' %}</div>
-                                    <div class="exploreImg_tagline">{% translate 'Home to the oldest surviving depiction of the Holy Land' %}</div>
+                                    <div class="exploreImg_title">Church of St. George</div>
+                                    <div class="exploreImg_tagline">Home to the oldest surviving depiction of the Holy Land</div>
                                 </div>
                             </div>
                         </div>
                         <button class="exploreButton" onclick="window.open('madaba.html');">
-                            {% translate 'Explore' %}
+                            Explore
                         </button>
                     </div>
                     <div class="surveyMonkeyGroup" id="surveyMonkeyGroup">
                         <div class="surveyMonkeyTitle" id="surveyMonkeyTitle">
-                            {% translate 'Take our Survey!' %}
+                            Take our Survey!
                         </div>
                         <div class="surveyMonkeyDiv" id="surveyMonkeyDiv">
                             <script>
@@ -5222,11 +5222,11 @@
 
             <div class="surveyBottomUI" id="surveyBottomUI">
                 <div class="surveyBottomCenterUI" id="surveyBottomCenterUI">
-                    <div class="surveyButton" id="ssRestartButton">{% translate 'Restart Experience</div>
+                    <div class="surveyButton" id="ssRestartButton">Restart Experience</div>
                 </div>
                 <div class="surveyBottomCenterUI_responsive" id="surveyBottomCenterUI">
                     <div class="surveyButtonRes" id="ssRestartButtonRes">Restart</div>
-                    <button class="donateButton" onclick="window.open('https://cyark.org/donate');">{% translate 'Donate</button>
+                    <button class="donateButton" onclick="window.open('https://cyark.org/donate');">Donate</button>
                 </div>
             </div>
         </div>
@@ -5242,18 +5242,18 @@
                     <button tabindex="0" aria-hidden="true" class="ssPrevButton ssButton acc_scenePages acc_overviewPages" id="ssPrevButton" aria-label="Previous/Replay Scene Button">
                         <div class="ssInnerButton" id="ssP-Prev">
                             <img aria-hidden="true" tabindex="-1" class="ssButtonImg tabIndexZero" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/navigation_arrow_left_orange.svg" />
-                            <div class="ssNavToolTip" id="ssPrevButtonTooltip">{% translate 'Previous Scene</div>
+                            <div class="ssNavToolTip" id="ssPrevButtonTooltip">Previous Scene</div>
                         </div>
                         <div class="ssInnerButton" id="ssP-Restart">
                             <img aria-hidden="true" tabindex="-1" class="ssButtonImg tabIndexZero" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/navigation_restart.svg" />
-                            <div class="ssNavToolTip" id="ssRestartTooltip">{% translate 'Replay Scene</div>
+                            <div class="ssNavToolTip" id="ssRestartTooltip">Replay Scene</div>
                         </div>
                     </button>
 
                     <button tabindex="0" aria-hidden="true" id="ssPlaypenButtonPress" class="ringButtonGroup ssPlaypenButtonPress" aria-label="Enter 3D exploration mode">
                         <div class="ssPlaypenButton ssButton" id="ssPlaypenButton">
                             <img aria-hidden="true" tabindex="-1" class="ssPlaypenImg tabIndexZero" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/playpen_icon_w.svg" alt="Playpen icon" />
-                            <div class="ssNavToolTip">{% translate 'Explore in 3D</div>
+                            <div class="ssNavToolTip">Explore in 3D</div>
                         </div>
                         <div class="ppButtonRing ping boxy" id="ppButtonRing"></div>
                     </button>
@@ -5262,11 +5262,11 @@
                         <button tabindex="0" aria-hidden="true" class="ssNextButton ssButton acc_scenePages acc_overviewPages" id="ssNextButton" aria-label="Skip/Next Button">
                             <div class="ssInnerButton" id="ssN-Next">
                                 <img aria-hidden="true" tabindex="-1" class="ssButtonImg tabIndexZero" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/navigation_arrow_right_orange.svg" />
-                                <div class="ssNavToolTip">{% translate 'Next Scene</div>
+                                <div class="ssNavToolTip">Next Scene</div>
                             </div>
                             <div class="ssInnerButton" id="ssN-Skip">
                                 <img aria-hidden="true" tabindex="-1" class="ssButtonImg tabIndexZero" src="https://tapestrystorage.blob.core.windows.net/ui-elements/nav_bar/navigation_skip.svg" />
-                                <div class="ssNavToolTip">{% translate 'Skip Voiceover</div>
+                                <div class="ssNavToolTip">Skip Voiceover</div>
                             </div>
                         </button>
                         <div class="ssNextButtonRing ping rounded" id="ssNextButtonRing"></div>
@@ -5293,7 +5293,7 @@
 
         <div aria-hidden="true" class="middleUI">
             <div class="panTooltip" id="panTooltip">
-                <div class="panTooltipText">{% translate 'Drag to Explore</div>
+                <div class="panTooltipText">Drag to Explore</div>
                 <div class="panTooltipGif">
                     <img class="panToolTip" src="https://tapestrystorage.blob.core.windows.net/ui-elements/tutorial/pan_tooltip.gif" alt="Pan Tool Tip: prompt to click and look around" />
                 </div>
@@ -5302,7 +5302,7 @@
 
         <div aria-hidden="true" class="middleUI">
             <div class="interactiveTooltip" id="interactiveTooltip">
-                <div class="interactiveTooltipText">{% translate 'Explore in 3D</div>
+                <div class="interactiveTooltipText">Explore in 3D</div>
                 <div class="interactiveTooltipGif">
                     <img class="interactiveTooltip_img" src="https://tapestrystorage.blob.core.windows.net/ui-elements/tutorial/interactive_arrow.gif" alt="Arrows showing hte interactive button" />
                 </div>
@@ -5336,7 +5336,7 @@
                     </video>
                 </div>
                 <div id="spText" class="spText">
-                    <h1 class="spLeftText" id="spLeftText">{% translate 'Video Title</h1>
+                    <h1 class="spLeftText" id="spLeftText">Video Title</h1>
                     <div class="spRightText" id="spRightText"></div>
                 </div>
             </div>
@@ -5367,17 +5367,17 @@
                 <div class="resourcesPopUp">
                     <div class="rp_topTitleGroup" id="rp_topTitleGroup">
                         <h1 class="rp_topTitle" id="rp_topTitle" tabindex="0">
-                            {% translate 'Resources
+                            Resources
                         </h1>
                         <div class="rp_topTitleSite">
                             {{ tour.title }}
                         </div>
                         <div class="rp_navMenu">
-                            <a href="#rp_info" class="rp_navButton">{% translate 'About</a>
-                            <a href="#rp_gallery" class="rp_navButton">{% translate 'Gallery</a>
-                            <a href="#rp_links" class="rp_navButton">{% translate 'Related Links</a>
-                            <a href="#rp_partners" class="rp_navButton">{% translate 'Partners</a>
-                            <a href="#rp_credits" class="rp_navButton">{% translate 'Credits</a>
+                            <a href="#rp_info" class="rp_navButton">About</a>
+                            <a href="#rp_gallery" class="rp_navButton">Gallery</a>
+                            <a href="#rp_links" class="rp_navButton">Related Links</a>
+                            <a href="#rp_partners" class="rp_navButton">Partners</a>
+                            <a href="#rp_credits" class="rp_navButton">Credits</a>
                         </div>
                         <div class="rp_topOverlay"></div>
                     </div>
@@ -5398,7 +5398,7 @@
 
                         <div class="rp_galleryGroup" id="rp_gallery">
                             <h2 class="rp_groupTitle">
-                                {% translate 'Gallery
+                                Gallery
                             </h2>
                             <div class="rp_galleryParent">
                                 <div class="rp_galleryActive">
@@ -5415,12 +5415,12 @@
                         <div class="rp_line"></div>
 
                         <div class="rp_linksGroup" id="rp_links">
-                            <h2 class="rp_groupTitle">{% translate 'Related Links</h2>
+                            <h2 class="rp_groupTitle">Related Links</h2>
 
                             <div class="rp_links" id="rp_links">
                                 <div class="rp_linkGorup rp_linkGroupFirst">
                                     <div class="rp_linkTitle">
-                                        {% translate 'Kelsey Museum of Archaeology
+                                        Kelsey Museum of Archaeology
                                     </div>
                                     <div class="rp_link">
                                         <a target="_blank" href="https://lsa.umich.edu/kelsey/research/current-field-projects/el-kurru--sudan.html">https://lsa.umich.edu/kelsey/research/current-field-projects/el-kurru--sudan.html</a>
@@ -5429,7 +5429,7 @@
                                 <div class="rp_innerLine"></div>
                                 <div class="rp_linkGorup rp_linkGroupFirst">
                                     <div class="rp_linkTitle">
-                                        {% translate 'Narrating Nubia
+                                        Narrating Nubia
                                     </div>
                                     <div class="rp_link">
                                         <a target="_blank" href="https://sites.lsa.umich.edu/nubia/">https://sites.lsa.umich.edu/nubia/</a>
@@ -5442,17 +5442,17 @@
 
                         <div class="rp_partnersGroup" id="rp_partners">
                             <h2 class="rp_groupTitle">
-                                {% translate 'Partners
+                                Partners
                             </h2>
 
                             <div class="rp_partnersParent">
                                 <a class="sPartnerLogo" aria-label="Partner logo, click to Yangzhou University website " href="https://www.yzu.edu.cn/" target="_blank">
                                     <img src="{% static 'images/yzu.jpeg' %}" alt="Yangzhou University" />
-                                    <div class="sPartnerTooltip">{% translate 'Yangzhou University</div>
+                                    <div class="sPartnerTooltip">Yangzhou University</div>
                                 </a>
                                 <a class="sPartnerLogo" aria-label="Partner logo, click to visit College of Information Engineering website " href="http://xxgcxy.yzu.edu.cn/en/" target="_blank" style="background-color: blue;">
                                     <img src="http://xxgcxy.yzu.edu.cn/en/images/logo.png" alt="College of Information Engineering" />
-                                    <div class="sPartnerTooltip">{% translate 'College of Information Engineering</div>
+                                    <div class="sPartnerTooltip">College of Information Engineering</div>
                                 </a>
                             </div>
                         </div>
@@ -5461,11 +5461,11 @@
 
                         <div class="rp_creditsGroup" id="rp_credits">
                             <h2 class="rp_groupTitle">
-                                {% translate 'Credits
+                                Credits
                             </h2>
 
                             <div class="rp_creditsText">
-                                {% translate 'This tour was created as part of the Yangzhou University
+                                This tour was created as part of the Yangzhou University
                             </div>
                         </div>
                     </div>

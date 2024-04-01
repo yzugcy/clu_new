@@ -3,7 +3,8 @@ from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseBadRequest
+from django.template import RequestContext
 
 from customauth.forms import LoginForm
 
@@ -16,39 +17,22 @@ class LoginView(LoginView):
     form_class = LoginForm
 
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect('dashboard:dashboard')
-        form = self.form_class
-        context = {
-            'form': form,
-        }
-        return render(request, self.template_name, context)
+
+        return render(request, self.template_name)
 
     def post(self, request, *args, **kwargs):
-        if request.GET:
-            next_page = request.GET['next']
-        else:
-            next_page = ''
-        form = self.form_class(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
+
+
+            email = request.POST.get('email')
+            password = request.POST.get('password')
             user = authenticate(email=email, password=password)
             if user:
                 login(request, user)
-                if next_page == '':
-                    return redirect('dashboard:dashboard')
-                else:
-                    return HttpResponseRedirect(next_page)
+                print("OK................")
+                return redirect('/zh-hans/')
             else:
-                messages.warning(request, 'Invalid email or password')
-        else:
-            print(form.errors)
-            logger.error(f'Invalid form data: {form.errors}')
-            messages.warning(
-                request, 'Invalid email or password. Please enter correctly.'
-            )
-        context = {
-            'form': form,
-        }
-        return render(request, self.template_name, context)
+                err_msg = "loging error"
+                print(err_msg)
+                return render(request, self.template_name, {'err_msg': err_msg})
+
+

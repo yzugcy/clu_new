@@ -1,0 +1,173 @@
+{% extends 'base/base.html' %}
+{% load humanize static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% load static %}
+{% load static i18n %}
+{% block content %}
+<div class="container" style="background-image: url('/static/images/bg.jpg')">
+<p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -400px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+    ><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Share List' %}</span></strong></span></p>
+   <table class="table11_7">
+           <tr>
+        <th>{% translate 'id' %}</th><th>{% translate 'source' %}</th><th>{% translate 'category' %}</th><th>{% translate ' sharing author' %}</th><th>{% translate 'time' %}</th><th>{% translate 'operation' %}</th>
+    </tr>
+            {% for classic in classics %}
+       <tr>
+           <td>{{ classic.id }}</td>
+           <td>{{ classic.title }}</td>
+           <td>{{ classic.category }}</td>
+           <td>{{ classic.author}}</td>
+           <td>{{ classic.create_time}}</td>
+           <td>
+
+           <a href="{% url 'readclassic:sdetails' classic.id %}">查看详情</a>
+            {% if  classic.author == user.email  %}
+                <a href="{% url 'readclassic:sdetaildeclassic' classic.id user.email%}">删除</a>
+               {% endif %}
+           </td>
+
+
+       </tr>
+        {% endfor %}
+   </table>
+
+<br/>
+<p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: 300px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+    ><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Share Time' %}</span></strong></span></p>
+  <form action="{% url 'readclassic:cs' user.email %}" method="post" class="basic-grey" enctype="multipart/form-data">
+
+    <h1>Share Form
+        <span>Please share classic books that you read in here.</span>
+    </h1>
+      {% csrf_token %}
+
+    <label>
+        <span>Title :</span>
+        <textarea id="message" name="title" placeholder="Your Content to Classic">   </textarea>
+    </label>
+    <label>
+        <span>Content :</span>
+        <textarea id="message" name="content" placeholder="Your Content to Classic">   </textarea>
+    </label>
+
+    <label>
+
+        <input id="name" type="text" name="author"  value="{{ user.email }}" hidden="hidden"/>
+    </label>
+ <label>
+        <span>Category :</span>
+     <select name="category">
+         <option value="哲学">哲学</option>
+           <option value="历史">历史</option>
+             <option value="文学">文学</option>
+              <option value="文学">旅游</option>
+           <option value="文学">其他</option>
+     </select>
+    </label>
+    <label>
+        <span>Image :</span>
+           <input type="file" name="img">
+        <p style="font-size: 10px;color: red">{% translate 'Note: Only support (.jpeg|.jpg|.bmp|.png) type' %}</p>
+
+    </label>
+    <label>
+        <input type="submit" class="button1" value="Share this" />
+
+    </label>
+</form>
+<p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: 300px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+    ><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Guess You Like' %}</span></strong></span></p>
+<div>
+  {% if c_pr %}
+      <table class="table11_7">
+           <tr>
+        <th>{% translate 'id' %}</th><th>{% translate 'source' %}</th><th>{% translate 'category' %}</th><th>{% translate ' sharing author' %}</th><th>{% translate 'time' %}</th><th>{% translate 'operation' %}</th>
+    </tr>
+            {% for classic1 in c_pr %}
+       <tr>
+           <td>{{ classic1.id }}</td>
+           <td>{{ classic1.title }}</td>
+           <td>{{ classic1.category }}</td>
+           <td>{{ classic1.author}}</td>
+           <td>{{ classic1.create_time}}</td>
+           <td>
+
+           <a href="{% url 'readclassic:sdetails' classic1.id %}">查看详情</a>
+            {% if  classic1.author == user.email  %}
+                <a href="{% url 'readclassic:sdetaildeclassic' classic1.id user.email %}">删除</a>
+               {% endif %}
+           </td>
+
+
+       </tr>
+        {% endfor %}
+   </table>
+
+{% else %}
+      <p style="color: #c6c8ca;font-size: 10px;margin-top: 4%">{% translate 'We have not Something to recommend to you, please comment more' %}</p>
+   {% endif %}
+
+
+</div>
+</div>
+    <style>
+    .table11_7 {
+        width:100%;
+        margin:0 3%;
+        border:0;
+    }
+    .table11_7 th {
+        background-color:#00A5FF;
+        color:#FFFFFF
+    }
+    .table11_7,.table11_7 th,.table11_7 td {
+        font-size:0.95em;
+        text-align:center;
+        padding:4px;
+        border-collapse:collapse;
+    }
+    .table11_7 th,.table11_7 td {
+        border: 1px solid rgba(19, 110, 199, 0.57);
+        border-width:1px 0 1px 0;
+        border:2px inset #ffffff;
+    }
+    .table11_7 tr {
+        border: 1px solid #ffffff;
+    }
+    .table11_7 tr:nth-child(odd){
+        background-color:#aae1fe;
+    }
+    .table11_7 tr:nth-child(even){
+        background-color:#ffffff;
+    }
+</style>
+
+{% endblock content %}

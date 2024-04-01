@@ -19,12 +19,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
-from .views import HomePageView
+from .views import HomePageView, GameView
 from .translations import set_language
 
 urlpatterns = [
     path('management/', admin.site.urls),
     path('setlang/', set_language, name='set_language'),
+    path('', GameView.as_view(), name='game'),
+
 ]
 
 # Language Translation
@@ -32,8 +34,14 @@ urlpatterns += i18n_patterns(
     path('', HomePageView.as_view(), name='home'),
     path('user/', include('customauth.urls')),
     path('dashboard/', include('dashboard.urls')),
+    path('courses/', include('course.urls')),
     path('blogs/', include('blog.urls')),
     path('virtualtour/', include('virtualtour.urls')),
+    path('history/', include('history.urls')),
+    path('readclassic/', include('readclassic.urls')),
+    path('diago/', include('diago.urls')),
+    path('west/', include('west.urls')),
+
 )
 
 # rosetta urls ------------------------------

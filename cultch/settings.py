@@ -14,7 +14,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .local_settings import (
     SECRET_KEY, DEBUG, ALLOWED_HOSTS, DB_CONFIG,
-    TEMPLATES_DIR, STATICFILES_DIR, STATIC_DIR, MEDIA_DIR, LOGS_DIR
+    TEMPLATES_DIR, STATICFILES_DIR, STATIC_DIR, MEDIA_DIR, LOGS_DIR, STATICFILES_DIR1
 )
 from cultch.logging import LOGGING
 
@@ -26,7 +26,7 @@ STATICFILES_DIR = os.getenv('STATICFILES_DIR', STATICFILES_DIR)
 STATIC_DIR = os.getenv('STATIC_DIR', STATIC_DIR)
 MEDIA_DIR = os.getenv('MEDIA_DIR', MEDIA_DIR)
 LOGS_DIR = os.getenv('LOGS_DIR', LOGS_DIR)
-
+STATICFILES_DIR1 = os.getenv('STATICFILES_DIR1', STATICFILES_DIR1)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -34,10 +34,10 @@ LOGS_DIR = os.getenv('LOGS_DIR', LOGS_DIR)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG
+DEBUG = True
 
 ALLOWED_HOSTS = ALLOWED_HOSTS
-
+USE_TZ = False
 
 # Application definition
 
@@ -49,6 +49,7 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
 ]
 
 THIRD_PARTY_APPS = [
@@ -62,9 +63,12 @@ LOCAL_APPS = [
     'customauth.apps.CustomauthConfig',
     'dashboard.apps.DashboardConfig',
     'pages.apps.PagesConfig',
+    'course.apps.CourseConfig',
     'blog.apps.BlogConfig',
+    'history.apps.HistoryConfig',
+    'readclassic.apps.ReadclassicConfig',
     'virtualtour.apps.VirtualtourConfig',
-    'timeline.apps.TimelineConfig',
+
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -143,7 +147,7 @@ LOGIN_REDIRECT_URL = 'dashboard:dashboard'
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'zh-hans'
 
 LANGUAGES = (
     ('en', _('English')),
@@ -166,10 +170,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = STATIC_DIR  # production, don't forget to run collectstatic
-STATICFILES_DIRS = [STATICFILES_DIR, ]  # development environment
+STATICFILES_DIRS = [STATICFILES_DIR,]  # development environment
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

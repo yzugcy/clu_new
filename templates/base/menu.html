@@ -10,13 +10,30 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" >
                     <ul class="navbar-nav nav-menu float-none text-center">
                         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'blog:list' %}">{% translate 'Timeline' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'vt:list' %}">{% translate 'Virtual Tours' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% translate 'About' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">{% translate 'Contact' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">{% translate 'Travel Through Millennium' %}</a>
+                        <ul class="ur_st">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'history:dynasty_song'%}">{% translate 'Dynasty Songs' %}</a></li><br>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'game'%}">{% translate 'A Funny Game' %}</a></li>
+                        </ul>
+
+                          <li class="nav-item"><a class="nav-link" href="#">{% translate 'Immersive' %}</a>
+                        <ul class="ur_st2">
+                       <li class="nav-item"><a class="nav-link" href="{% url 'vt:list' %}">{% translate 'Virtual Tours' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'vt:sharevideo'%}">{% translate 'Trip Videos' %}</a></li>
+                        </ul>
+
+                        <li class="nav-item"><a class="nav-link" href="#">{% translate 'Read Classics' %}</a>
+                        <ul class="ur_st2">
+                       <li class="nav-item"><a class="nav-link" href="{% url 'readclassic:lfs' %}">{% translate 'Famous Sayings' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'readclassic:cs' user.email %}">{% translate 'Classic Sharing' %}</a></li>
+                        </ul>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'diago:diago' %}">{% translate 'Dialogue with sages' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'west:west' %}">{% translate 'East to West' %}</a></li>
+
+{#                        <li class="nav-item"><a class="nav-link" href="contact.html">{% translate 'Contact' %}</a></li>#}
                     </ul>
                 </div>
             </div>
@@ -27,3 +44,31 @@
         </div>
     </div>
 </div>
+<style>
+ul li{
+    list-style: none;
+}
+
+
+.ur_st{
+    width: 16%;
+    height: 10%;
+    margin-left: 1%;
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    z-index: 50;
+}
+.ur_st2{
+    width: 20%;
+    height: 10%;
+    margin-left: 0%;
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    z-index: 50;
+}
+#navbarNavDropdown li:hover ul{
+    display: block;
+}
+</style>

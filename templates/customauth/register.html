@@ -1,40 +1,37 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base_login.html' %}
 {% load static %}
-
+{% load static i18n %}
 {% block content %}
+     <body style="background-image: url('/static/images/login-bg5.png');background-size: cover;background-attachment: fixed">
 <div class="banner-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-5 d-none d-xl-block p-0 bg-image-cover bg-no-repeat" style="background-image: url({% static 'images/login-bg.jpg' %});"></div>
-            <div class="col-xl-7 align-items-center d-flex bg-white rounded-lg overflow-hidden">
-                <div class="card shadow-none border-0 ml-auto mr-auto login-card">
-                    <div class="card-body rounded-0 text-left">
-                        <h2 class="fw-700 display1-size display2-md-size mb-3">
-                            Register here
-                        </h2>
-                        <form>
+ <form action="" method="post" class="login-form">
+          <img src="/static/images/register-icon.png" width="200px" height="150px"/>
+                                     {%csrf_token%}
                             <div class="form-group icon-input mb-3">
                                 <i class="font-sm ti-email text-grey-500 pr-0"></i>
-                                <input type="text" class="style2-input pl-5 form-control text-grey-900 font-xsss fw-600" placeholder="Your Email Address" />
+                                <input type="text" class="style2-input pl-5 form-control text-grey-900 font-xsss fw-600" placeholder="Your Email Address" name="email" />
                             </div>
                             <div class="form-group icon-input mb-3">
-                                <input type="Password" class="style2-input pl-5 form-control text-grey-900 font-xss ls-3" placeholder="Password" />
+                                <input type="Password" class="style2-input pl-5 form-control text-grey-900 font-xss ls-3" placeholder="Password" name="password" />
                                 <i class="font-sm ti-lock text-grey-500 pr-0"></i>
                             </div>
                             <div class="form-group icon-input mb-3">
-                                <input type="Password" class="style2-input pl-5 form-control text-grey-900 font-xss ls-3" placeholder="Confirm Password" />
+                                <input type="Password" class="style2-input pl-5 form-control text-grey-900 font-xss ls-3" placeholder="Confirm Password" name="confirm_password"/>
                                 <i class="font-sm ti-lock text-grey-500 pr-0"></i>
                             </div>
-                        </form>
-        
-                        <div class="col-sm-12 p-0 text-left">
-                            <div class="form-group mb-1"><a href="#" class="form-control text-center style2-input text-white fw-600 bg-primary border-0 p-0">Register</a></div>
-                            <h6 class="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Already have an account? <a href="{% url 'customauth:login' %}" class="fw-700 ml-1">Login</a></h6>
+                             <div class="form-group icon-input mb-3">
+                                <input type="text" class="style2-input pl-5 form-control text-grey-900 font-xss ls-3" placeholder="Name" name="name"/>
+                                <i class="font-sm ti-marker text-grey-500 pr-0"></i>
+                            </div>
+                              <div class="col-sm-12 p-0 text-left">
+                            <div class="form-group mb-1"><input type="submit" class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0" value="Register"></div>
+                            <h6 class="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32"><span style="color: black">Already have an account?</span> <a href="{% url 'customauth:login' %}" class="fw-700 ml-1">Login</a></h6>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        </form>
+   <link rel="stylesheet" href="{% static 'css/style-login.css' %}" />
+       </div>
 </div>
+</body>
+
 {% endblock content %}

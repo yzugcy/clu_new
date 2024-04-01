@@ -30,3 +30,12 @@ class VirtualTourDetailsView(View):
             'tour': tour
         }
         return render(request, self.template_name, context)
+
+class VirtualTourShareVideoView(View):
+    template_name = 'virtualtour/sharevideo.html'
+
+
+    def get(self, request, *args, **kwargs):
+
+
+        return render(request, self.template_name)

@@ -1,0 +1,238 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static i18n %}
+
+
+
+<html>
+
+
+	{% block content %}
+	<body>
+    <div class="container">
+   <b><font style="background-image: -webkit-linear-gradient(left, #145196, rgba(5,24,230,0.66) 25%, #144196 50%, #0567e6 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 180%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;font-size: large"><b style="font-size: 23px">{% translate '欣赏中国大好河山，品味千年传统文化' %}</b></font></b><br/></div>
+
+
+
+    <style>
+
+        .overall{
+            width: 900px;
+            height: 500px;
+            align-items: center;
+            margin: 0% auto;
+        }
+
+        .content{
+            position: relative;
+            height: 400px;
+        }
+
+        .content ul{
+            list-style-type: none;
+        }
+
+        .content ul>li{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            transition: 1s;
+            opacity: 0;
+        }
+
+        .content ul>li img{
+            width: 900px;
+            height: 500px;
+            border-radius: 5%;
+
+            border-image: url("/static/images/bg2.png");
+            border-width: 2rem;
+            border-style: dotted;
+            border-color: grey;
+            border-image-repeat: repeat;
+            border-image-slice: 650 175;
+
+        }
+
+        /* 设置轮播图下面的小点 */
+        .content ol{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 75px);
+            grid-template-rows: auto;
+            grid-gap: 1em;
+            gap:1em;
+            float: right;
+            margin-top: 450px;
+            list-style: none;
+            top: 0;
+            left: 0;
+        }
+
+        .content ol li{
+            width: 20px;
+            height: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            float: left;
+            text-align: center;
+            border-radius: 2em;
+
+        }
+    </style>
+
+    <div class="overall">
+        <div class="content">
+        <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 86%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -30px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Photos' %}</span></strong></span></p>
+            <ul>
+                <li><img src="/static/images/sc1.png" alt=""></li>
+                <li><img src="/static/images/sc2.png" alt=""></li>
+                <li><img src="/static/images/sc3.png" alt=""></li>
+                <li><img src="/static/images/homepic1.png" alt=""></li>
+            </ul>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <br/> <br/>
+    <div class="container"> <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 86%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: 0px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+    ><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Videos' %}</span></strong></span></p>
+
+        <video
+  id="video"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/toursharing.png" width="45%" height="400px"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%">
+</video>
+  <video
+  id="video2"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/toursharing.png" width="45%" height="400px"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%" >
+</video>
+    </div>
+</body>
+
+<script>
+    // 当页面载入的时候加载这个函数
+    window.onload = function()
+    {
+
+    // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+    var content = this.document.getElementsByClassName("content")[0];
+
+    // 获取ul中的li
+    var li = content.getElementsByTagName("li");
+
+    // 函数传入两个参数，(i,j)
+    function fun(i, j)
+    {//转换图片函数，就是把透明度改了一下
+        li[i].style.opacity=1;
+        li[j].style.opacity=0;
+
+        // 然后也把小图标的颜色改一下
+        // 把图标改成白色
+        // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+        li[i + 4].style.backgroundColor = "#ffffff";
+
+        // 把图标改成透明
+        li[j + 4].style.backgroundColor = "#00000000";
+    }
+
+    // 默认情况下轮播图为第一张
+    fun(0, 1);//初始化下
+    var i = 0;
+    function auto()
+    {//轮播循环函数
+        i ++;
+        // 当数组越界的时候
+        if(i >= 4)
+        {
+        // 置为0
+            i = 0;
+            // 然后递归重新开始
+            // 这里的2位3-1的意思
+            fun(0, 3);
+        }
+        else
+        {
+            // 反之递归
+            fun(i, i - 1);
+        }
+    }
+    // 设置变化的时间
+    timer = this.setInterval(auto, 2000);
+
+    // 设置鼠标在轮播图上的时候 轮播图就停止播放
+    content.onmouseover = function ()
+    {
+        //鼠标划上去，停止轮播
+        clearInterval(timer);
+    }
+
+    // 设置鼠标在轮播图上的时候 轮播图就继续播放
+    content.onmouseout = function ()
+    {
+        //鼠标划出，继续轮播
+        timer = setInterval(auto, 2000); //调用定时器
+    }
+    var j = 0;
+    for(; j < 4; j++)
+    {
+        //点击小图标也可以转换图片
+        li[j + 4].index = j;
+        // 当点击小图标进行的函数
+        li[j + 4].onclick = function()
+        {
+            fun(this.index, i)
+            i = this.index;
+        }
+    }
+}
+</script>
+
+{% endblock content %}
+</html>

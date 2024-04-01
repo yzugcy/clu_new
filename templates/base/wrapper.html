@@ -30,14 +30,20 @@
                             {% get_available_languages as LANGUAGES %}
                             {% get_language_info_list for LANGUAGES as languages %}
                             <a href="{% url 'set_language' %}?language={{ languages.0.code }}">English</a>
-                            <a href="{% url 'set_language' %}?language={{ languages.1.code }}">中国</a>
+                            <a href="{% url 'set_language' %}?language={{ languages.1.code }}">中文</a>
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#"><i class="ti-location-pin mr-2"></i> {% translate 'Yangzhou University' %}</a>
+                        <a href="#"><i class="ti-location-pin mr-2"></i> {% translate 'China' %}</a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#"><i class="ti-user mr-2"></i> {% translate 'My Account' %}</a>
+                                  {% if user.is_authenticated %}
+                      <em><i class="ti-user mr-2"></i> {{ user.email }}</em>
+                                  {% else %}       <span class="list-inline-item pl-0"> {% translate 'Please Login' %}</span>
+                {% endif %}
+                    </li>
+                </ul>
+            </div>
                     </li>
                 </ul>
             </div>

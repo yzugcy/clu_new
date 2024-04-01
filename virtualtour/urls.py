@@ -11,4 +11,9 @@ urlpatterns = [
         '<str:slug>/explore/', views.VirtualTourDetailsView.as_view(),
         name='details'
     ),
+
+    path(
+        'sharevideo/', views.VirtualTourShareVideoView.as_view(),
+        name='sharevideo'
+    ),
 ]

@@ -1,0 +1,144 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+{% load static i18n %}
+<div class="container" style="background-image: url('/static/images/bg.jpg')"><br/><br/>
+   <b><font style="background-image: -webkit-linear-gradient(left, #145196, rgba(5,24,230,0.66) 25%, #144196 50%, #0567e6 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 180%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;font-size: large"><b style="font-size: 23px">{% translate 'The history of dynasties sets sail from here' %}</b></font></b><br/>
+   <br/><br/> <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: 5px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong>
+<span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Dynasties Introduction' %}</span></strong></span></p>
+    <br/>
+     <div class="feedback-slider owl-carousel owl-theme overflow-visible dot-none right-nav pb-4" style="margin-bottom: -100px">
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/tang.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">{% translate 'The Tang Dynasty is considered a golden age of Chinese arts and culture. In power from 618 to 906 A.D., Tang China attracted an international reputation that spilled out of its cities and, through the practice of Buddhism, spread its culture across much of Asia.'%}唐朝被认为是中国艺术和文化的黄金时代。公元618年至906年，唐朝掌权，吸引了国际声誉，并通过佛教的实践，将其文化传播到亚洲大部分地区。</p>
+
+                        </div>
+                    </div>
+
+                   <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/shang.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">{% translate 'The Shang Dynasty is the earliest ruling dynasty of China to be established in recorded history, though other dynasties predated it. The Shang ruled from 1600 to 1046 B.C. and heralded the Bronze Age in China. They were known for their advances in math, astronomy, artwork and military technology.' %}商朝是有记录以来中国最早建立的统治王朝，尽管其他王朝早于商朝。商朝统治时期为公元前1600年至1046年，预示着中国青铜时代的到来。他们以数学、天文学、艺术和军事技术的进步而闻名。</p>
+
+                        </div>
+                    </div>
+
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/ming.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">{% translate 'The Ming Dynasty ruled China from A.D. 1368 to 1644, during which China’s population would double. Known for its trade expansion to the outside world that established cultural ties with the West, the Ming Dynasty is also remembered for its drama, literature and world-renowned porcelain.'%}明朝从公元1368年到1644年统治中国，在此期间中国的人口将翻一番。明朝以其对外贸易扩张和与西方建立文化联系而闻名，其戏剧、文学和世界闻名的瓷器也被人们铭记</p>
+
+                        </div>
+                    </div>
+
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/han.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">{% translate 'The Han Dynasty ruled China from 206 B.C. to 220 A.D. and was the second imperial dynasty of China. Though tainted by deadly dramas within the royal court, it is also known for its promotion of Confucianism as the state religion and opening the Silk Road trade route to Europe, permanently altering the course of Chinese history. Han Dynasty art and inventions like paper still influence the world today.'%}汉朝从公元前206年到公元220年统治中国，是中国的第二个王朝。尽管受到了宫廷内部致命戏剧的影响，但它也因将儒家思想作为国教而闻名，并开辟了通往欧洲的丝绸之路贸易路线，永久改变了中国历史的进程。汉代的艺术和纸等发明至今仍影响着世界。</p>
+
+                        </div>
+                    </div>
+
+                        <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/qin.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">{% translate 'The Qin Dynasty established the first empire in China, starting with efforts in 230 B.C., during which the Qin leaders engulfed six Zhou Dynasty states. Their reign over Imperial China existed only briefly—from 221 to 206 B.C.—but the Qin Dynasty had a lasting cultural impact on the dynasties that followed.' %} 公元前230年，秦朝建立了中国第一个帝国，在此期间，秦朝领导人吞并了周朝的六个国家。从公元前221年到公元前206年，他们对中国帝国的统治只短暂存在过，但秦朝对随后的王朝产生了持久的文化影响。</p>
+
+                        </div>
+                    </div>
+
+
+            </div>
+
+     <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -30px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'The Dynasty song' %}</span></strong></span></p>
+   <div class="page" contenteditable>
+      <div style="font-family: STXingkai;width: 50%;height:100%;float: left"> <div style="font-size: 30px;font-weight: bolder">历史朝代顺序时间</div>
+           <div style="font-size: 25px">1.夏朝：前2070年 - 前1600年（禹—桀）<br/>
+2.商朝：前1600年 - 前1046年（汤）<br/>
+3.周朝：前1046年 - 前221年<br/>
+（1）西周：前1046年 - 前771年（周武王）<br/>
+（2）东周：前770年 - 前256年（周平王）<br/>
+4.秦朝：前221年 - 前207年（嬴政）<br/>
+5.汉朝：前202年 - 220年<br/>
+6.隋朝：581年 - 618年<br/>
+7.唐朝：618年 - 907年<br/>
+8.五代十国：907年 - 979年<br/>
+9. 宋朝<br/>
+（1）北宋：960年 - 1127年<br/>
+（2）南宋：1127年 - 1279年<br/>
+10. 元朝：1271年 - 1368年<br/>
+11. 明朝：1368年 - 1644年<br/>
+12. 清朝：1644年 - 1911年</div>
+		</div>
+        <div style="font-family: STXingkai;padding-top: 200px;padding-left:300px"> <div style="font-size: 50px;font-weight: bolder">《朝代歌》<br/></div>
+            <div style="font-size: 45px">唐尧虞舜夏商周，<br/>春秋战国乱悠悠。<br/>秦汉三国西东晋，<br/>南朝北朝是对头。<br/>隋唐五代又十国，<br/>宋元明清帝王休。</div>
+
+		</div>
+       </div>
+     <div style="background-image: url('/static/images/bg.jpg')"> <br/>  <br/>  <br/>  <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -30px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Sing the Dynasty song' %}</span></strong></span></p>
+  <br/>
+    <video
+  id="video"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/nasy_songs.png" width="45%" height="400px"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%">
+</video>
+  <video
+  id="video2"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/nasy_songs.png" width="45%" height="400px"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%" >
+</video>
+</div>
+</div>
+{% endblock content %}

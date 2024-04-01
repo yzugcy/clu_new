@@ -1,20 +1,20 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% load static i18n %}
-
 {% block content %}
 <div class="banner-wrapper bg-after-fluid">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 order-lg-1 pt-lg--10 pb-lg--10 xl-p-5">
-                <h2 class="display3-size display2-md-size fw-700 aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">{% translate 'Discover the Ancient Civilization of China.' %}</h2>
-                <h4 class="font-xssss fw-600 ml-1 aos-init lh-24" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">{% translate 'For only course you need to learn Chinese history' %}</h4>
+                <h2 class="display3-size display2-md-size fw-700 aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" style="color: #000000">览千年文化精粹，品优秀美丽中国</h2>
+                <h4 class="font-xssss fw-600 ml-1 aos-init lh-24" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" style="color: #000000">{% translate "Here, you will learn about China's millennium old cultural heritage, such as stories, philosophy, scenic spots" %}</h4>
                 <div class="form-group mt-lg-5 p-3 border-light border p-2 bg-white rounded-lg aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
-                    <form action="" method="get">
+                    <form action="">
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="form-group icon-input mb-0">
                                     <i class="ti-search font-xs text-grey-400"></i>
-                                    <input type="text" name="keyword" class="form-control style1-input bg-transparent border-0 pl-5 font-xsss mb-0 text-grey-500 fw-500" placeholder="Search online courses.." />
+                                    <input type="text" name="keyword" class="form-control style1-input bg-transparent border-0 pl-5 font-xsss mb-0 text-grey-500 fw-500" placeholder="find more.." />
                                 </div>
                             </div>
     
@@ -22,23 +22,23 @@
                                 <div class="form-group icon-input mb-0">
                                     <i class="ti-package font-xs text-grey-400"></i>
                                     <select class="style1-select bg-transparent border-0 pl-5">
-                                        <option value="">{% translate 'All Categories' %}</option>
-                                        <option value="151781441596 ">{% translate 'literature' %}</option>
-                                        <option value="139360141372 ">{% translate 'Art' %}</option>
-                                        <option value="139118313532 ">{% translate 'History Science' %}</option>
-                                        <option value="139118313532 ">{% translate 'Science and Technology' %}</option>
-                                        <option value="139360141372 ">{% translate 'Philosophy' %}</option>
+                                        <option value="">{% translate 'history'%}</option>
+                                        <option value="151781441596 ">文学</option>
+                                        <option value="139360141372 ">哲学</option>
+                                        <option value="139118313532 ">戏曲</option>
+                                        <option value="139118313532 ">名胜古迹</option>
+                                        <option value="139360141372 ">书法</option>
 
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <button type="submit" class="w-100 d-block btn bg-current text-white font-xssss fw-600 ls-3 style1-input p-0 border-0 text-uppercase">Search</button>
+                                <button type="submit" class="w-100 d-block btn bg-current text-white font-xssss fw-600 ls-3 style1-input p-0 border-0 text-uppercase" >搜索</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <h4 class="font-xssss ml-1 lh-24 text-white" style="font-size: 16px !important; font-weight: bold;"><b>{% translate 'Popular Search :' %}</b> <a href="" style="color: #cdd810;">books,history, literature</a>, <a href="" style="color: #cdd810;">Art</a>, <a href="" style="color: #cdd810;">Science</a>, <a href="" style="color: #cdd810;">Philosophy</a></h4>
+
             </div>
         </div>
     </div>
@@ -48,81 +48,198 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="page-title style1 col-xl-6 col-lg-8 col-md-10 text-center mb-5">
-                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">{% translate 'Why Choose Us?' %}</h2>
-                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'We are the best online learning platform with AI-model,VR and auto creation of poems.' %}</p>
+                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block" style="background-image: url('/static/images/pomo-min.png');background-size: cover;background-repeat: no-repeat;width: 119%%;"><font style="color: white;font-size: 25px;padding-top: 30px " >领略中华万千文化，从这里开始</font></h2>
+                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'Come here, you can view.' %}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="card p-4 border-0 text-center d-block arrow-right">
-                    <svg class="position-absolute top-0" style="margin-left: -44px; opacity: 0.2;" xmlns="http://www.w3.org/2000/svg" width="125.062" height="88.62" viewBox="0 0 125.062 88.62">
-                        <path
-                            style="fill: #ffb09f !important;"
-                            d="M488.806,2544.02s35.988-16.17,53.518-7.45S565,2541.44,574,2549s18.09,19.21,14.009,41.12c-3.62,19.44-25.466,15.87-37.2,27.79-10.557,10.72-68.616,1.88-74.4-12.88-6.841-17.45-13.114-17.84-12.406-34.03C464.452,2560.66,475.315,2554.71,488.806,2544.02Z"
-                            transform="translate(-463.938 -2534)"
-                        ></path>
-                    </svg>
-                    <i class="feather-layers display1-size position-relative z-index text-warning"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate 'Blazing Performance' %}</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'User friendly interface, easy to use and fast.' %}</p>
-                </div>
+
             </div>
-            <div class="col-lg-4 arrow-right">
-                <div class="card p-4 border-0 text-center d-block">
-                    <svg class="position-absolute top-0" style="margin-left: -44px; opacity: 0.2;" xmlns="http://www.w3.org/2000/svg" width="125.062" height="88.62" viewBox="0 0 125.062 88.62">
-                        <path
-                            style="fill: #ad78ef !important;"
-                            d="M488.806,2544.02s35.988-16.17,53.518-7.45S565,2541.44,574,2549s18.09,19.21,14.009,41.12c-3.62,19.44-25.466,15.87-37.2,27.79-10.557,10.72-68.616,1.88-74.4-12.88-6.841-17.45-13.114-17.84-12.406-34.03C464.452,2560.66,475.315,2554.71,488.806,2544.02Z"
-                            transform="translate(-463.938 -2534)"
-                        ></path>
-                    </svg>
-                    <i class="feather-lock display1-size position-relative z-index text-secondary"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate 'Free Updates' %}</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'Auto update facility' %}</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card p-4 border-0 text-center d-block">
-                    <svg class="position-absolute top-0" style="margin-left: -44px; opacity: 0.2;" xmlns="http://www.w3.org/2000/svg" width="125.062" height="88.62" viewBox="0 0 125.062 88.62">
-                        <path
-                            style="fill: #3ed2a7 !important;"
-                            d="M488.806,2544.02s35.988-16.17,53.518-7.45S565,2541.44,574,2549s18.09,19.21,14.009,41.12c-3.62,19.44-25.466,15.87-37.2,27.79-10.557,10.72-68.616,1.88-74.4-12.88-6.841-17.45-13.114-17.84-12.406-34.03C464.452,2560.66,475.315,2554.71,488.806,2544.02Z"
-                            transform="translate(-463.938 -2534)"
-                        ></path>
-                    </svg>
-                    <i class="feather-box display1-size position-relative z-index text-success"></i>
-                    <h2 class="font-md fw-700 text-grey-900 mt-5 mb-3">{% translate '24/7 Supports' %}</h2>
-                    <p class="fw-500 font-xsss lh-28 text-grey-500">{% translate 'No need to worry,our system will handle your emergency cases.' %}</p>
-                </div>
-            </div>
+
+    <style>
+
+        .overall{
+            width: 900px;
+            height: 500px;
+            align-items: center;
+            margin: 0% auto;
+        }
+
+        .content{
+            position: relative;
+            height: 400px;
+        }
+
+        .content ul{
+            list-style-type: none;
+        }
+
+        .content ul>li{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            transition: 1s;
+            opacity: 0;
+        }
+
+        .content ul>li img{
+            width: 900px;
+            height: 500px;
+            border-radius: 5%;
+            box-shadow:0 15px 30px rgba(0,0,0,0.2);
+            border-width: 0.1rem;
+            border-style: dotted;
+            border-color: grey;
+            border-image-repeat: repeat;
+            border-image-slice: 650 175;
+
+        }
+
+        /* 设置轮播图下面的小点 */
+        .content ol{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 75px);
+            grid-template-rows: auto;
+            grid-gap: 1em;
+            gap:1em;
+            float: right;
+            margin-top: 450px;
+            list-style: none;
+            top: 0;
+            left: 0;
+
+        }
+
+        .content ol li{
+            width: 20px;
+            height: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            float: left;
+            text-align: center;
+            border-radius: 2em;
+          border: 1px bisque solid;
+        }
+    </style>
+    <script>
+    // 当页面载入的时候加载这个函数
+    window.onload = function()
+    {
+
+    // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+    var content = this.document.getElementsByClassName("content")[0];
+
+    // 获取ul中的li
+    var li = content.getElementsByTagName("li");
+
+    // 函数传入两个参数，(i,j)
+    function fun(i, j)
+    {//转换图片函数，就是把透明度改了一下
+        li[i].style.opacity=1;
+        li[j].style.opacity=0;
+
+        // 然后也把小图标的颜色改一下
+        // 把图标改成白色
+        // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+        li[i + 4].style.backgroundColor = "#ffffff";
+
+        // 把图标改成透明
+        li[j + 4].style.backgroundColor = "#00000000";
+    }
+
+    // 默认情况下轮播图为第一张
+    fun(0, 1);//初始化下
+    var i = 0;
+    function auto()
+    {//轮播循环函数
+        i ++;
+        // 当数组越界的时候
+        if(i >= 4)
+        {
+        // 置为0
+            i = 0;
+            // 然后递归重新开始
+            // 这里的2位3-1的意思
+            fun(0, 3);
+        }
+        else
+        {
+            // 反之递归
+            fun(i, i - 1);
+        }
+    }
+    // 设置变化的时间
+    timer = this.setInterval(auto, 2000);
+
+    // 设置鼠标在轮播图上的时候 轮播图就停止播放
+    content.onmouseover = function ()
+    {
+        //鼠标划上去，停止轮播
+        clearInterval(timer);
+    }
+
+    // 设置鼠标在轮播图上的时候 轮播图就继续播放
+    content.onmouseout = function ()
+    {
+        //鼠标划出，继续轮播
+        timer = setInterval(auto, 2000); //调用定时器
+    }
+    var j = 0;
+    for(; j < 4; j++)
+    {
+        //点击小图标也可以转换图片
+        li[j + 4].index = j;
+        // 当点击小图标进行的函数
+        li[j + 4].onclick = function()
+        {
+            fun(this.index, i)
+            i = this.index;
+        }
+    }
+}
+</script>
+              <div class="overall">
+        <div class="content">
+
+            <ul>
+                <li><img src="/static/images/homeicon1.png" alt="哲学、文学:体会古诗、宋词的韵律之美"></li>
+                <li><img src="/static/images/homeicon2.png" alt="名人:感受诗人、教育家的励志故事"></li>
+                <li><img src="/static/images/homeicon3.png"  alt="旅游:浏览中国大好河山"></li>
+                <li><img src="/static/images/homeicon4.png" alt="历史:探索中国名胜的悠久历史"></li>
+            </ul>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+
         </div>
     </div>
 </div>
+
+
 
 <div class="how-to-work pb-lg--7">
     <div class="container">
         <div class="row justify-content-center">
             <div class="page-title style1 col-xl-8 col-lg-8 col-md-10 text-center mb-5">
-                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block">{% translate 'Are you Looking for Live Class ?' %}</h2>
-                <p class="fw-300 font-xsss lh-28 text-grey-500">{% translate 'orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dol ad minim veniam, quis nostrud exercitation</p>
+                <h2 class="text-grey-900 fw-700 display1-size display2-md-size pb-3 mb-0 d-block" style="background-image: url('/static/images/pomo-min.png');background-size: cover;background-repeat: no-repeat;width: 86%;"><font style="color: white;font-size: 25px;padding-top: 30px " >学习中国传统文化，从这里开始</font></h2>
+                <p class="fw-300 font-xsss lh-28 text-grey-500">点击视频，一起来学习中国文化</p>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <div class="card border-0 mb-0 rounded-lg overflow-hidden live-stream bg-image-center bg-image-cover" style="background-image: url({% static 'images/video-bg.jpg' %});">
+                <div class="card border-0 mb-0 rounded-lg overflow-hidden live-stream bg-image-center bg-image-cover">
                     <div class="card-body d-flex justify-content-start p-2 position-absolute top-0 w-100 bg-gradiant-top">
-                        <figure class="avatar mb-0 mt-0 overflow-hidden"><img src="{% static 'images/user-1.png' %}" alt="image" class="z-index-1 shadow-sm rounded-circle w40" /></figure>
-                        <h5 class="text-white mt-1 fw-700 ml-2 z-index-1">Cabe Deo <span class="d-block font-xsssss mt-1 fw-400 text-grey-300 z-index-1">2 hour</span></h5>
-                        <span class="live-tag position-absolute right-15 mt-2 bg-danger p-2 z-index-1 rounded-lg text-white font-xsssss text-uppersace fw-700 ls-3">LIVE</span>
+                        <video width="100%" height="100%" controls>
+                           <source src="/static/images/1.mp4"  type="video/mp4">
+                         </video>
                     </div>
-                    <div class="card-body text-center p-2 position-absolute w-100 bottom-0 bg-gradiant-bottom">
-                        <a href="#" class="btn-round-xl d-md-inline-block d-none bg-blur m-3 mr-0 z-index-1"><i class="feather-grid text-white font-md"></i></a>
-                        <a href="#" class="btn-round-xl d-md-inline-block d-none bg-blur m-3 z-index-1"><i class="feather-mic-off text-white font-md"></i></a>
-                        <a href="#" class="btn-round-xxl bg-danger z-index-1"><i class="feather-phone-off text-white font-md"></i></a>
-                        <a href="#" class="btn-round-xl d-md-inline-block d-none bg-blur m-3 z-index-1"><i class="ti-video-camera text-white font-md"></i></a>
-                        <a href="#" class="btn-round-xl d-md-inline-block d-none bg-blur m-3 ml-0 z-index-1"><i class="ti-settings text-white font-md"></i></a>
-                        <span class="p-2 bg-blur z-index-1 text-white fw-700 font-xssss rounded-lg right-15 position-absolute mb-4 bottom-0">44:00</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -138,25 +255,25 @@
                             <img src="{% static 'images/star.png' %}" alt="star" class="w15" />
                             <img src="{% static 'images/star-disable.png' %}" alt="star" class="w15" />
                         </div>
-                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">433 rating Based</h4>
+                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">433 点赞</h4>
                     </div>
 
                     <div class="col-lg-3 col-xs-6 col-sm-6">
                         <h2 class="display4-size display4-md-size fw-700 open-font mb-3">210<span class="font-xxl">%</span> <i class="feather-arrow-up-right text-success font-xl"></i></h2>
                         <h4 class="font-xssss text-grey-500 fw-600 mt-2">433 rating</h4>
-                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">Increase in revenue</h4>
+                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">收视率</h4>
                     </div>
 
                     <div class="col-lg-3 col-xs-6 col-sm-6">
-                        <h2 class="display4-size display4-md-size fw-700 open-font mb-3">20<span class="font-xxl">%</span> <i class="feather-arrow-down-right text-danger font-xl"></i></h2>
+                        <h2 class="display4-size display4-md-size fw-700 open-font mb-3">0<span class="font-xxl">%</span> <i class="feather-arrow-down-right text-danger font-xl"></i></h2>
                         <h4 class="font-xssss text-grey-500 fw-600 mt-2">433 rating</h4>
-                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">Increase in revenue</h4>
+                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">不喜欢</h4>
                     </div>
 
                     <div class="col-lg-3 col-xs-6 col-sm-6">
                         <h2 class="display4-size display4-md-size fw-700 open-font mb-3">43K<span class="font-xxl">+</span> <i class="feather-arrow-up-right text-success font-xl"></i></h2>
                         <h4 class="font-xssss text-grey-500 fw-600 mt-2">433 rating</h4>
-                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">Increase in revenue</h4>
+                        <h4 class="font-xssss text-grey-900 fw-700 mt-2">收视率</h4>
                     </div>
                 </div>
             </div>
@@ -168,7 +285,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 text-left mb-5 pb-0">
-                <h2 class="text-grey-800 fw-700 display1-size display2-md-size lh-2">Elomoas love what we do</h2>
+                <h2 class="text-grey-800 fw-700 display1-size display2-md-size lh-2"><img src="/static/images/homepic5.png" width="40px" height="40px" style="background-image: url('/static/images/bg.jpg')">更多人在学习</h2>
             </div>
 
             <div class="col-lg-12">
@@ -178,9 +295,9 @@
                             <div class="card-body pl-0 pt-0">
                                 <img src="{% static 'images/user-6.png' %}" alt="user" class="w45 float-left mr-3" />
                                 <h4 class="text-grey-900 fw-700 font-xsss mt-0 pt-1">Goria Coast</h4>
-                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">Digital Marketing Executive</h5>
+                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">热爱中国诗词</h5>
                             </div>
-                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">Human coronaviruses are common and are typically associated with mild illnesses, similar to the common cold.</p>
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">我最喜欢李白的诗句，床前明月光，疑是地上霜。举头望明月，低头思故乡。</p>
                             <div class="star d-block w-100 text-right mt-4 mb-0">
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
@@ -196,9 +313,9 @@
                             <div class="card-body pl-0 pt-0">
                                 <img src="{% static 'images/user-7.png' %}" alt="user" class="w45 float-left mr-3" />
                                 <h4 class="text-grey-900 fw-700 font-xsss mt-0 pt-1">Thomas Smith</h4>
-                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">Digital Marketing Executive</h5>
+                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">热爱中国旅游</h5>
                             </div>
-                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">Human coronaviruses are common and are typically associated with mild illnesses, similar to the common cold.</p>
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">我最喜欢去西安，那里有兵马俑，历史悠久</p>
                             <div class="star d-block w-100 text-right mt-4 mb-0">
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
@@ -214,9 +331,9 @@
                             <div class="card-body pl-0 pt-0">
                                 <img src="{% static 'images/user-8.png' %}" alt="user" class="w45 float-left mr-3" />
                                 <h4 class="text-grey-900 fw-700 font-xsss mt-0 pt-1">Hurin Seary</h4>
-                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">Digital Marketing Executive</h5>
+                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">热爱孔子</h5>
                             </div>
-                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">Human coronaviruses are common and are typically associated with mild illnesses, similar to the common cold.</p>
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">学而时习之，不亦说乎...</p>
                             <div class="star d-block w-100 text-right mt-4 mb-0">
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
@@ -232,9 +349,9 @@
                             <div class="card-body pl-0 pt-0">
                                 <img src="{% static 'images/user-6.png' %}" alt="user" class="w45 float-left mr-3" />
                                 <h4 class="text-grey-900 fw-700 font-xsss mt-0 pt-1">Goria Coast</h4>
-                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">Digital Marketing Executive</h5>
+                                <h5 class="font-xssss fw-500 mb-1 text-grey-500">热爱中国历史</h5>
                             </div>
-                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">Human coronaviruses are common and are typically associated with mild illnesses, similar to the common cold.</p>
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0">三皇五帝夏商周，春秋战国乱悠悠。秦汉三国东西晋，南朝北朝是对头...</p>
                             <div class="star d-block w-100 text-right mt-4 mb-0">
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
                                 <img src="{% static 'images/star.png' %}" alt="star" class="w15 mr-1 float-left mr-2" />
@@ -254,20 +371,56 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card w-100 p-lg-5 p-4 rounded-xxl border-0" style="background-image: url('/static/images/subscribe.jpeg'); background-repeat: no-repeat; background-size: cover; min-height: 400px;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10 text-center">
-                            <h2 class="fw-700 text-grey-900 display2-size display2-md-size lh-3 mb-3" style="margin-top: 50px;">{% translate 'Subscribe up to our newsletter' %}</h2>
-                        </div>
-                        <div class="col-lg-6 text-center mt-md-4 mb-3">
-                            <div class="form-group icon-right-input style2-input mb-0">
-                                <input type="text" placeholder="Enter Email Address" class="form-control style2 rounded-xl bg-white border-0 font-xsss fw-500 pl-3" /><i class="feather-mail text-primary font-lg m-1"></i>
-                            </div>
+                 <h2 class="text-grey-800 fw-700 display1-size display2-md-size lh-2"><img src="/static/images/homepic5.png" width="40px" height="40px" style="background-image: url('/static/images/bg.jpg')">节气诗词欣赏</h2>
+                 <div class="col-lg-12">
+                <div class="feedback-slider owl-carousel owl-theme overflow-visible dot-none right-nav pb-4">
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/homepic2.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">《悯农》-李绅<br/>春种一粒粟,秋收万颗子。<br/>四海无闲田,农夫犹饿死。</p>
+
                         </div>
                     </div>
-                </div>
+
+                   <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/xmhomepic3.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">《五绝·小满》-欧阳修<br/>夜莺啼绿柳，皓月醒长空。<br/>最爱垄头麦，迎风笑落红。</p>
+
+                        </div>
+                    </div>
+
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/lxhomepic4.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">《小池》-杨万里<br/>泉眼无声惜细流，树阴照水爱晴柔。<br/>小荷才露尖尖角，早有蜻蜓立上头</p>
+
+                        </div>
+                    </div>
+
+                    <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/lqhomepic5.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">《立秋》-刘翰<br/>乳鸦啼散玉屏空,一枕新凉一扇风。 <br/>睡起秋声无觅处,满阶梧叶月明中。</p>
+
+                        </div>
+                    </div>
+
+                        <div class="owl-items text-center">
+                        <div class="card w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/gyhompic6.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: center">《谢中上人寄茶》-齐己<br/>春山谷雨前，并手摘芳烟。<br/>
+          绿嫩难盈笼，清和易晚天。<br/>且招邻院客，试煮落花泉。<br/>
+          地远劳相寄，无来又隔年。</p>
+
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
     </div>
 </div>
+    <style>div#marqueeBox{height: 50%;background:transparent;padding:40px;text-align:center;margin:0 auto;font-size: 28px;color: #FFFFFF;
+} </style>
 {% endblock content %}
+

@@ -40,6 +40,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.CharField(
         _("Email Address"), max_length=255, unique=True, db_index=True
     )
+
     is_staff = models.BooleanField(_("Staff Status"), default=False)
     is_active = models.BooleanField(_("Active Status"), default=True)
     accepted_terms = models.BooleanField(_("accepted terms"), default=False)

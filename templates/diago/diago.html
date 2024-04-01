@@ -1,0 +1,110 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static i18n %}
+{% block content %}
+<body style="background-image: url('/static/images/bg.jpg')">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+<style>
+    .form {
+        margin-right: 20px;
+    }
+    .form input {
+        width: 200px;
+        padding: 5px;
+    }
+    .form button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .message {
+        margin-top: 20px;
+        width: 350px;
+    }
+    .image-container {
+
+    }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+  <div class="form">
+            <div>
+                <input type="text" id="input1" placeholder="输入框1" onkeypress="handleKeyPress(1)">
+            </div>
+            <div>
+                <input type="text" id="input2" placeholder="输入框2" onkeypress="handleKeyPress(2)">
+            </div>
+            <div>
+                <input type="text" id="input3" placeholder="输入框3" onkeypress="handleKeyPress(3)">
+            </div>
+            <p id="message" class="message">阿松大阿松大十大爱的啊实打实的啊实打实打算撒大苏打实打实大苏打啊大苏打撒旦啊大苏打撒旦阿松大爱的啊啊十大打赏大苏打啊实打实阿松大</p>
+        </div>
+        <div class="image-container">
+            <img src="/static/images/homepic1.png" alt="img" style="margin-left: 30%;margin-top: -30%" width="200px" height="50px">
+        </div>
+    </div>
+    <audio id="audioPlayer">
+        <source id="audioSource" src="c:/output.mp3"  type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function handleKeyPress(inputNum) {
+            if (event.keyCode === 13) {
+                submitData(inputNum);
+            }
+        }
+
+        function submitData(inputNum) {
+            var inputValue = document.getElementById('input' + inputNum).value;
+            console.log('输入框' + inputNum + ':', inputValue);
+            if(inputNum==1){
+                // 调用 refreshAudio 函数来刷新音频
+                refreshAudio();
+                document.getElementById('audioPlayer').play(); // 播放音频
+            }
+
+            // 发送数据到Django视图
+            // $.ajax({
+            //     url: '/url/',
+            //     type: 'POST',
+            //     data: {
+            //         'input_num': inputNum,  // 每个值代表不同的输入框，根据输入框进行调用方法。
+            //         'input_value': inputValue
+            //     },
+            //     dataType: 'json',
+            //     success: function (data) {
+            //         console.log('成功发送数据到Django后端');
+            //         console.log('Django返回的消息:', data.message);
+            //         document.getElementById('message').innerText = '后端返回的消息: ' + data.message;
+            //         // 在这里可以根据返回的数据做进一步处理
+            //     },
+            //     error: function (error) {
+            //         console.log('发送数据到Django后端时出错:', error);
+            //     }
+            // });
+        }
+
+    function refreshAudio() {
+      var audioPlayer = document.getElementById('audioPlayer');
+      var audioSource = document.getElementById('audioSource');
+
+      // 更新音频文件的 URL
+      audioSource.src = 'c:/voice/output.mp3?' + new Date().getTime(); // 在 URL 后添加时间戳以确保每次都是新的 URL
+      audioPlayer.load(); // 重新加载音频
+    }
+
+    </script>
+</div>
+</body>
+{% endblock content %}

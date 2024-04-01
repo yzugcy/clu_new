@@ -1,0 +1,17 @@
+[Unit]
+Description=cultch-uWSGI-instance
+After=network.target postgresql-13.service
+
+[Service]
+User=centos
+Group=nginx
+WorkingDirectory=/opt/cultch
+Environment="PATH=/opt/cultch/venv/bin"
+ExecStart=/opt/cultch/venv/bin/uwsgi --ini /opt/cultch/uwsgi/uwsgi.ini
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

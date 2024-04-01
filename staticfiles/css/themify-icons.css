@@ -226,9 +226,7 @@
 .ti-crown:before {
 	content: "\e642";
 }
-.ti-comments:before {
-	content: "\e643";
-}
+
 .ti-comment:before {
 	content: "\e644";
 }

@@ -1,0 +1,314 @@
+{% extends 'base/base_game.html' %}
+{% load static %}
+{% load static i18n %}
+
+<div class="container">
+    {% block content %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+    body{
+      margin: 0 auto;
+    }
+
+    .game-box{
+		/* overflow: hidden; */
+      position: fixed;
+      top: 40px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 14% auto;
+      width: 600px;
+      height: 600px;
+      border: 2px solid skyblue;
+      padding: 1px;
+    }
+
+    .game{
+      height: 100%;
+      position: relative;
+    }
+
+    .game>div{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: url("/static/images/bg1.jpg");
+      background-repeat: no-repeat;
+      padding: 1px;
+      box-sizing: border-box;
+      background-clip: content-box;
+	  transition: all 0.5s;
+    }
+
+    .game>.a1{
+      left: 0;
+      top: 0;
+      background-position: 0px 0px;
+    }
+    .game>.a2{
+      left: 200px;
+      top: 0;
+      background-position: -200px 0px;
+    }
+    .game>.a3{
+      left: 400px;
+      top: 0;
+      background-position: -400px 0px;
+    }
+
+    .game>.a4{
+      left: 0;
+      top: 200px;
+      background-position: 0 -200px;
+    }
+    .game>.a5{
+      left: 200px;
+      top: 200px;
+	  opacity: 0;
+      background-position: -200px -200px;
+    }
+    .game>.a6{
+      left: 400px;
+      top: 200px;
+      background-position: -400px -200px;
+      /* background-image: none; */
+    }
+
+    .game>.a7{
+      left: 0;
+      top: 400px;
+      background-position: 0 -400px;
+    }
+    .game>.a8{
+      left: 200px;
+      top: 400px;
+      background-position: -200px -400px;
+    }
+    .game>.a9{
+      left: 400px;
+      top: 400px;
+      background-position: -400px -400px;
+    }
+	#btn{
+		border: 0;
+		background-color: transparent;
+		width: 60px;
+		height: 50px;
+		outline: none;
+		float: left;
+	}
+	#btn img{
+		width: 100%;
+		height: 100%;
+	}
+	.star{
+		width: 500px;
+		padding: 10px 0;
+		margin: 40px auto;
+		height: 50px;
+		overflow: hidden;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	.mxy{
+		width: 600px;
+		padding: 10px 0;
+		margin: 10px auto;
+	}
+  </style>
+
+<body>
+	<div class="star"><button type="button" id="btn"><img src="/static/images/重新开始.png" ></button> <span>&nbsp;你能猜出下图的内容是哪个朝代的吗？</span></div>
+	<div class="star">
+		<select id="select" style="font-size: 20px">
+			<option>-请选择-</option>
+			<option>春秋</option>
+			<option>汉朝</option>
+			<option>秦朝</option>
+			<option>清朝</option>
+			<option>宋朝</option>
+		</select>
+		<button id="sub_button"  class="button" style="font-size: 20px;width: 100px;height: 50px;border: none">提交</button>
+	</span>
+	</div>
+  
+  <div class="game-box">
+    <div class="game" id="game">
+      <div class='a1'></div>
+      <div class='a2'></div>
+      <div class='a3'></div>
+      <div class='a4'></div>
+      <div class='a5' id="while"></div>
+      <div class='a6'></div>
+      <div class='a7'></div>
+      <div class='a8'></div>
+      <div class='a9'></div>
+    </div>
+  </div>
+
+
+
+<script type="text/javascript">
+	//图片常量
+	const imgarr=['t1','t2','t3','t4']
+	// const mxy_name =none
+	let tu;
+	//创建初始常量
+	// const arr=['a1','a2','a3','a4','a5','a6','a7','a8','a9'];
+	const arr=[{left:'0px',top:'0px',},{left:'200px',top:'0px'},{left:'400px',top:'0px'},{left:'0px',top:'200px'},{left:'200px',top:'200px'},{left:'400px',top:'200px'},{left:'0px',top:'400px'},{left:'200px',top:'400px'},{left:'400px',top:'400px'}]
+	//备用变量用于随机
+	let arr1=arr.concat()
+	//sort方法随机数组,=>函数是es6高级写法,相当于function(){}
+	arr1.sort(()=>{
+		return Math.random()-0.5;
+	})
+	// console.log(arr1)
+	//创建构造函数,es6语法糖写法
+	class Puzzle{
+		constructor(arr,arr1){
+			this.list=arr;
+			this.rlist=arr1;	
+		}
+		//原型里添加函数,随机拼图
+			disor(){
+				//获取所有拼图标签
+				let game=document.querySelectorAll('#game div');
+				//获取空白位置
+				let lucency=document.querySelector('#while')
+				let con=this.list;
+				//遍历所有标签并为其添加left和top
+				for(let i=0;i<game.length;i++){
+					// console.log(this.rlist[i])
+					game[i].style.left=this.rlist[i].left
+					game[i].style.top=this.rlist[i].top
+					
+					
+					//给每个div加鼠标按下事件
+					// game[i].offsetLeft
+					game[i].onclick=function(){
+						//添加拖动事件	
+						// this.onmousemove=function(){
+							//拿到空白位置的left值
+							let pleft=lucency.offsetLeft
+							//拿到空白位置的top值
+							let ptop=lucency.offsetTop
+							//获取点击方块的left
+							let gleft=this.offsetLeft;
+							//获取点击方块的top
+							let gtop=this.offsetTop
+							
+							//判断其高度宽度差距决定是否移动位置
+							if(gleft-pleft<=200&&gleft-pleft>0&&gtop==ptop || pleft-gleft<=200&&pleft-gleft>0&&gtop==ptop){
+								this.style.left=pleft+'px';
+								lucency.style.left=gleft+'px'
+							}else if(gtop-ptop<=200&&gtop-ptop>0&&gleft==pleft || ptop-gtop<=200&&ptop-gtop>0&&gleft==pleft){
+								this.style.top=ptop+'px';
+								lucency.style.top=gtop+'px'
+							}
+							
+						// };
+						//创建一个数组做记录
+						let a=[]
+						for(let j=0;j<con.length;j++){
+							
+							// console.log('conleft',con[j].left)
+							// console.log('game',game[j].style.left)
+							//不断与原数组做比较,如果符合就给数组a加一位数
+							if(con[j].left==game[j].style.left&&con[j].top==game[j].style.top){
+								a.push(j)
+								
+								if(a.length==con.length){
+									//全部符合就显示隐藏模块
+									lucency.style.opacity='1'
+									game[j].onclick=null
+									alert("恭喜您完成拼图！")
+								}
+							}
+						}
+						console.log(a)
+						
+				
+					}
+					// //添加鼠标弹起事件
+					// game[i].onmouseup=function(){
+					// 	//取消拖动事件
+					// 	this.onmousemove=null
+					// };
+				}
+				
+			}
+			//随机图片
+			img(imgarr){
+				//获取所有拼图标签
+				let game=document.querySelectorAll('#game div');
+				//随机图片
+				tu=imgarr[Math.floor(Math.random()*(imgarr.length))];
+
+				//遍历所有拼图div标签
+				for(let k=0;k<this.rlist.length;k++){
+					
+					//给每个div更改背景图片
+					game[k].style.backgroundImage=' url("/static/images/'+tu+'.png")'
+				}
+			}
+			
+	}
+	//实例化构造函数
+	let pbreak=new Puzzle(arr,arr1)
+	//调用随机图片方法
+	pbreak.img(imgarr)
+	//调用拼图方法
+	pbreak.disor()
+	
+	//点击按钮实现页面以达到重新开始或者随机图片
+	let btn=document.querySelector('#btn')
+	btn.onclick=function(){
+		location.reload()
+	}
+
+
+	// mxy 2024年3月30日17点49分
+	let sub_button=document.querySelector('#sub_button')
+	sub_button.onclick=function(){
+		// 获取<select>元素
+		var selectElement = document.querySelector('#select');
+		// 获取当前选定的值
+		var selectedValue = selectElement.value;
+		console.log(tu)
+		console.log(selectedValue);
+		if(tu=="t1"&& selectedValue=="春秋"){
+			alert('恭喜你回答正确！')
+			location.reload()
+
+		}else if(tu=="t2"&& selectedValue=="秦朝"){
+
+			alert('恭喜你回答正确！')
+			location.reload()
+
+		}else if(tu=="t3"&& selectedValue=="清朝"){
+			alert('恭喜你回答正确！')
+			location.reload()
+
+		}else if(tu=="t4"&& selectedValue=="宋朝"){
+			alert('恭喜你回答正确！')
+			location.reload()
+
+		}
+		else{
+			alert("回答错误，完成拼图也许会知道答案哦！")
+		}
+	}
+	
+</script>
+
+
+</body>
+
+
+</div>
+
+	{% endblock content %}

@@ -1,0 +1,213 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static i18n %}
+{% block content %}<body style="background-image: url('/static/images/bg.jpg')">
+<div class="container" >
+
+<link href="/static/css/style34.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/form1.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http//fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+<script src="/static/js/jquery1.min.js"></script>
+<!-- start menu -->
+<link href="/static/css/megamenu1.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="/static/js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script type="text/javascript" src="/static/js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!-- start details -->
+<script src="/static/js/slides.min.jquery.js"></script>
+   <script>
+		$(function(){
+			$('#products').slides({
+				preload: true,
+				preloadImage: '/static/images/loading.gif',
+				effect: 'slide, fade',
+				crossfade: true,
+				slideSpeed: 350,
+				fadeSpeed: 500,
+				generateNextPrev: true,
+				generatePagination: false
+			});
+		});
+	</script>
+	<!-- start zoom -->
+	<link rel="stylesheet" href="/static/css/zoome-min1.css" />
+	<script type="text/javascript" src="/static/js/zoome-e.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		$('#img1,#img2,#img3,#img4').zoome({showZoomState:true,magnifierSize:[250,250]});
+	});
+	</script>
+<style>
+    ul{font-size: 20px}
+
+</style>
+  <div class="main1">
+     <div class="wrap">
+     	<ul class="breadcrumb breadcrumb__t"><i class="ti-arrow-right"></i>&nbsp;&nbsp;<a class="home" href="{% url 'home' %}">Home</a> / <a href="{% url 'readclassic:cs'  user.email%}">{% translate 'Classic Sharing' %}</a> / {% translate 'Details' %}</ul>
+		<div class="cont span_2_of_3">
+		  	<div class="grid images_3_of_2">
+						<div id="container">
+							<div id="products_example">
+								<div id="products">
+									<ul class="pagination">
+										<li> <img class="a" id="img1" src="/media/images/{{classic.img }}" alt=""  width="100%" height="100%"/></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+	            </div>
+		         <div class="desc1 span_3_of_2">
+                     <h3 class="m_3" style="font-weight: bolder">《{{ classic.title }}》<br> <span style="font-size: 10px">  <i class="ti-user mr-2"></i> {{ classic.author}}
+					&emsp;<span class="m_link"> <i class="ti-time mr-2"></i><a href="#">{{ classic.create_time}}</a> </span>&emsp;<i class="ti-book mr-2"></i>{{ classic.category }}</span></h3>
+
+
+				     <p class="m_text2" style="border: 1px dashed #c6c8ca">{{ classic.content}}</p><br>
+                     <div style="border: 1px dashed #c6c8ca;text-align: right;border: none"><a href="{% url 'readclassic:sdetailsup' classic.id  classic.likes %}"><span class="mr1-2">{% translate 'like' %}</span></a>{{ classic.likes}}</div>
+			     </div>
+			   <div class="clear"></div>
+	    <div class="clients">
+
+	<script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+     </div>
+     <div class="toogle">
+{#     	<h3 class="m_3">{% translate 'Comment or Share' %}</h3>#}
+     	<p class="m_text">
+<style>
+    .myahref
+
+    {
+        margin-left: 1%;
+
+    }
+     .myahref:hover
+
+    {
+       background-image: url("/static/images/rubbish.png");
+         background-size: contain;
+         background-repeat: no-repeat;
+         color: transparent;
+         z-index: 30;
+
+    }
+</style>
+<div class="feedback_area_title">     <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -400px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Comment List' %}</span></strong></span></p></div>
+        <div class="comment_list">
+          {% if  comment_list %}
+            {% for comment in comment_list %}
+
+                <div class="cb" id="one">
+                    <p><i class="ti-flag"></i>{{ forloop.counter}} &emsp;<i class="ti-user mr-2"></i>{{comment.author_email}}&emsp; <i class="ti-time mr-2"></i> {{ comment.comment_time}}    {% if  comment.author_email == user.email  %}
+                    <a href="{% url 'readclassic:sdetailsde' comment.id classic.id %}" class="myahref ">{% translate 'delete' %}</a>
+                {%endif%}
+                    <br/><br/><br/><p style="margin-left: 10%;font-size: 20px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif"></i>{{comment.content}}</p>
+                    <hr>
+
+                </div>
+               {% endfor %}
+          {% else %}
+                <p style="color: #c6c8ca;margin-top: 2%">{%  translate 'Have no comments now, you can give you comments' %}</p>
+          {%endif%}
+
+        </div>
+        </p>
+     </div>
+     <div class="toogle">
+ <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -400px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Comment and Share' %}</span></strong></span></p></div>
+  <form action="{% url 'readclassic:sdetails' classic.id %}" method="post" class="basic-grey">
+
+    <h1>Comment Form
+        <span>Please give your comments on the classic.</span>
+    </h1>
+      {% csrf_token %}
+
+
+
+    <label>
+        <span>Content :</span>
+        <textarea id="message" name="content" placeholder="Your Content to Classic">   </textarea>
+    </label>
+            <label>
+    <label>
+
+        <input id="name" type="text" name="email_pcd"  value="{{ user.email }}" hidden="hidden"/>
+    </label>
+        <input id="name" type="text" name="classicid"  value="{{ classic.id }}" hidden="hidden"/>
+    </label>
+
+    <label>
+        <span>&nbsp;</span>
+        <input type="submit" class="button" value="Comment" />
+    </label>
+</form>
+
+     </div>
+      </div>
+			<div class="rsingle span_1_of_single">
+				<h5 class="m_1">Categories</h5>
+
+					<ul class="kids">
+						<li><a href="#">哲学</a></li>
+						<li class="last"><a href="#">文学</a></li>
+                        		<li class="last"><a href="#">历史</a></li>
+                        		<li class="last"><a href="#">旅游</a></li>
+					</ul>
+                   <section  class="sky-form">
+					<h5 class="m_1">Popular</h5>
+
+					<ul class="kids">
+						<li><a href="#">哲学</a></li>
+						<li class="last"><a href="#">文学</a></li>
+
+					</ul>
+                       <h5 class="m_1">Popular Sharings</h5>
+
+					<ul class="kids">
+						<li><a href="#">《论语》</a></li>
+						<li class="last"><a href="#">《三字经》</a></li>
+
+					</ul>
+                    <h5 class="m_1">Popular Users</h5>
+
+					<ul class="kids">
+						<li><a href="#">1827316887@qq.com</a></li>
+						<li class="last"><a href="#">wtsf.sdfqss@qq.com</a></li>
+
+					</ul>
+		       </section>
+		       <script src="/static/js/jquery.easydropdown.js"></script>
+		      </div>
+		      <div class="clear"></div>
+			</div>
+			 <div class="clear"></div>
+		   </div>
+		</div>
+</div>
+    </body>
+{% endblock content %}
