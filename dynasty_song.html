@@ -1,0 +1,186 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+{% load static i18n %}
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+    <style>
+    img,object{max-width:100%;}
+    </style>
+<div class="container" style="background-image: url('/static/images/bg.jpg')"><br/><br/>
+   <b><font style="background-image: -webkit-linear-gradient(left, #145196, rgba(5,24,230,0.66) 25%, #144196 50%, #0567e6 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 180%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;font-size: large"><b style="font-size: 23px">{% translate 'The history of dynasties sets sail from here' %}</b></font></b><br/>
+   <br/><br/> <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: 5px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong>
+<span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Dynasties Introduction' %}</span></strong></span></p>
+    <br/>
+     <div class="feedback-slider owl-carousel owl-theme overflow-visible dot-none right-nav pb-4" style="margin-bottom: -100px;color: black">
+           <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/xia.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate "The Xia Dynasty is the first legendary dynasty in Chinese history, traditionally dated from approximately 2070 BCE to 1600 BCE. It is said to have been founded by Yu the Great, marking the end of China's prehistoric era and the beginning of its civilization."%}</p>
+                             <a href="{% url 'readclassic:xia' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+
+
+                   <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/shang.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Shang Dynasty is the earliest ruling dynasty of China to be established in recorded history, though other dynasties predated it. The Shang ruled from 1600 to 1046 B.C. and heralded the Bronze Age in China. They were known for their advances in math, astronomy, artwork and military technology.' %}</p>
+                           <a href="{% url 'readclassic:shang' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+                    <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/zhou.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Zhou Dynasty is divided into Western Zhou and Eastern Zhou periods. Western Zhou, represented by King Wen and King Wu, established the feudal system. Eastern Zhou entered the Spring and Autumn Period and the Warring States Period, a significant period of political change and cultural development in Chinese history.' %}</p>
+                           <a href="{% url 'readclassic:zhou' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+
+                        <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/qin.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Qin Dynasty established the first empire in China, starting with efforts in 230 B.C., during which the Qin leaders engulfed six Zhou Dynasty states. Their reign over Imperial China existed only briefly—from 221 to 206 B.C.—but the Qin Dynasty had a lasting cultural impact on the dynasties that followed.' %} </p>
+                        <a href="{% url 'readclassic:qin' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+                  <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/han.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Han Dynasty ruled China from 206 B.C. to 220 A.D. and was the second imperial dynasty of China. Though tainted by deadly dramas within the royal court, it is also known for its promotion of Confucianism as the state religion and opening the Silk Road trade route to Europe, permanently altering the course of Chinese history. Han Dynasty art and inventions like paper still influence the world today.'%}</p>
+                          <a href="{% url 'readclassic:han' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!--汉-->
+
+                      <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/sanguo.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate "The Three Kingdoms period was a time of political division in Chinese history, characterized by the tripartite division of the Wei, Shu, and Wu states. This period is the backdrop for the famous Chinese literary work 'Romance of the Three Kingdoms'."%}</p>
+                          <a href="{% url 'readclassic:sanguo' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!---->
+
+                    <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/sui.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate " The Sui Dynasty was a short-lived dynasty in Chinese history, but it unified the Northern and Southern Dynasties, initiating the first brief period of unity in Chinese history and laying the foundation for the rise of the Tang Dynasty."%}</p>
+                          <a href="{% url 'readclassic:sui' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!--隋-->
+
+                         <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/tang.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Tang Dynasty is considered a golden age of Chinese arts and culture. In power from 618 to 906 A.D., Tang China attracted an international reputation that spilled out of its cities and, through the practice of Buddhism, spread its culture across much of Asia.'%}</p>
+                             <a href="{% url 'readclassic:tang' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+                    <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/song.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate "The Song Dynasty is divided into the Northern Song and Southern Song periods, during which China experienced significant developments in politics, economy, and culture. Technological and artistic advancements were particularly notable during the Southern Song period."%}</p>
+                          <a href="{% url 'readclassic:song' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!--s-->
+
+                    <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/yuan.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate " The Yuan Dynasty was the first foreign-led dynasty in Chinese history, established by the Mongols, descendants of Genghis Khan. During the Yuan Dynasty, policies of ethnic integration were implemented, exerting a profound influence on Chinese history and culture."%}</p>
+                          <a href="{% url 'readclassic:yuan' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!--y-->
+
+
+
+                    <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/ming.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate 'The Ming Dynasty ruled China from A.D. 1368 to 1644, during which China’s population would double. Known for its trade expansion to the outside world that established cultural ties with the West, the Ming Dynasty is also remembered for its drama, literature and world-renowned porcelain.'%}</p>
+                          <a href="{% url 'readclassic:ming' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div>
+
+                 <div class="owl-items text-center">
+                        <div class="card1 w-100 p-5 text-left border-0 shadow-xss rounded-lg">
+                               <img src="/static/images/qing.png" width="100px" height="200px">
+                            <p class="font-xsss fw-400 text-grey-500 lh-28 mt-0 mb-0" style="text-align: justify">{% translate "The Qing Dynasty was the last feudal dynasty in Chinese history, established by the Manchu people. During the Qing Dynasty, China underwent a series of political and social reforms and encountered contacts and conflicts with foreign powers."%}</p>
+                          <a href="{% url 'readclassic:qing' %}" style="text-align: center">{% translate 'More Details' %}</a>
+                        </div>
+                    </div> <!--qin-->
+
+
+            </div>
+
+     <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -30px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'The Dynasty song' %}</span></strong></span></p>
+   <div class="page" contenteditable>
+
+        <div style="font-family: STXingkai;"><img src="/static/images/lishi.png" height="auto" style="width: 100%"/></div>
+
+		</div>
+
+     <div style="background-image: url('/static/images/bg.jpg')"> <br/>  <br/>  <br/>  <p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: -30px;
+     margin-top: -30px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong> <span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Sing the Dynasty song' %}</span></strong></span></p>
+  <br/>
+    <video
+  id="video"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/nasy_songs.png" width="45%" height="auto"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%">
+</video>
+  <video
+  id="video2"
+  src="/static/images/1.mp4"
+  controls = "true"
+  poster="/static/images/nasy_songs.png" width="45%" height="auto"
+  preload="auto"
+  webkit-playsinline="true"
+  playsinline="true"
+  x-webkit-airplay="allow"
+  x5-video-player-type="h5"
+  x5-video-player-fullscreen="true"
+  x5-video-orientation="portraint"
+  style="object-fit:fill;margin-left: 4%" >
+</video>
+</div>
+</div>
+{% endblock content %}

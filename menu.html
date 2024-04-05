@@ -1,0 +1,85 @@
+{% load static i18n %}
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+<div class="header-wrapper pt-3 pb-3 shadow-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 navbar pt-0 pb-0">
+                <a href="{% url 'home' %}">
+                    <h1 class="fredoka-font ls-3 fw-700 text-current font-xxl">CULTCH <span class="d-block font-xsssss ls-1 text-grey-500 open-font">Explore Chinese Language & Culture</span></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                    <ul class="navbar-nav nav-menu float-none text-center">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">{% translate 'Travel Through Millennium' %}</a>
+                        <ul class="ur_st">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'history:dynasty_song'%}">{% translate 'Dynasty Songs' %}</a></li><br>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'game'%}">{% translate 'A Funny Game' %}</a></li>
+                        </ul>
+                        </li>
+                          <li class="nav-item"><a class="nav-link" href="#">{% translate 'Immersive' %}</a>
+                        <ul class="ur_st2">
+                       <li class="nav-item"><a class="nav-link" href="{% url 'vt:list' %}">{% translate 'Virtual Tours' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'vt:sharevideo'%}">{% translate 'Trip Videos' %}</a></li>
+                        </ul>
+                          </li>
+                        <li class="nav-item"><a class="nav-link" href="#">{% translate 'Read Classics' %}</a>
+                        <ul class="ur_st2">
+                             <li class="nav-item"><a class="nav-link" href="{% url 'readclassic:tc' %}">{% translate 'Ten Classic' %}</a></li>
+                       <li class="nav-item"><a class="nav-link" href="{% url 'readclassic:lfs' %}">{% translate 'Famous Sayings' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'readclassic:cs' user.email %}">{% translate 'Classic Sharing' %}</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">{% translate 'Dialogue with Sages' %}</a>
+
+                        <ul class="ur_st2">
+
+                        <li class="nav-item"><a class="nav-link" href="{% url 'diago:sh' %}">{% translate 'Beautiful Poems' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'diago:diago' %}">{% translate 'Talk with Confucius' %}</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'west:west' %}">{% translate 'East to West' %}</a></li>
+
+{#                        <li class="nav-item"><a class="nav-link" href="contact.html">{% translate 'Contact' %}</a></li>#}
+                    </ul>
+                </div>
+            </div>
+                      {% if user.is_authenticated %}{% else %}
+            <div class="col-lg-3 text-right d-none d-lg-block">
+                <a href="{% url 'customauth:login' %}" class="header-btn bg-dark fw-500 text-white font-xssss p-2 lh-32 w100 text-center d-inline-block rounded-xl mt-1">{% translate 'Login' %}</a>
+                <a href="{% url 'customauth:register' %}" class="header-btn bg-current fw-500 text-white font-xssss p-2 lh-32 w100 text-center d-inline-block rounded-xl mt-1">{% translate 'Register' %}</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<style>
+ul li{
+    list-style: none;
+}
+
+
+.ur_st{
+    width: 16%;
+    height: 10%;
+    margin-left: 1%;
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    z-index: 50;
+}
+.ur_st2{
+    width: 20%;
+    height: 10%;
+    margin-left: 0%;
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    z-index: 50;
+}
+#navbarNavDropdown li:hover ul{
+    display: block;
+}
+</style>

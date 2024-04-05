@@ -1,0 +1,52 @@
+{% load humanize static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+
+<div class="upper-header bg-greylight">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 d-none d-block-md">
+                <ul class="list-inline list-item-style mt-0 float-left pl-1">
+                    <li class="list-inline-item pl-0"><a href="#">(+1)866-540-3229</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-xs-6 d-none d-block-md">
+                <ul class="list-inline list-item-style mt-0 float-right">
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-user mr-2"></i> {% translate 'My Account' %}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 d-none d-lg-block">
+                <ul class="list-inline list-item-style mt-0 float-left pl-1">
+                    <li class="list-inline-item pl-0"><a href="#">{% translate 'TERMS OF USE' %}</a></li>
+                    <li class="list-inline-item"><a href="#">{% translate 'PRIVACY POLICY' %}</a></li>
+                </ul>
+
+                <ul class="list-inline list-item-style mt-0 float-right">
+                    <li class="list-inline-item">
+                        <div class="form-group">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            <a href="{% url 'set_language' %}?language={{ languages.0.code }}">English</a>
+                            <a href="{% url 'set_language' %}?language={{ languages.1.code }}">中文</a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="ti-location-pin mr-2"></i> {% translate 'China' %}</a>
+                    </li>
+                    <li class="list-inline-item">
+                                  {% if user.is_authenticated %}
+                      <em><i class="ti-user mr-2"></i> {{ user.email }}</em>
+                                  {% else %}       <span class="list-inline-item pl-0"> {% translate 'Please Login' %}</span>
+                {% endif %}
+                    </li>
+                </ul>
+            </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

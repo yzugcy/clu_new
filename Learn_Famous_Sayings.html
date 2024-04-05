@@ -1,0 +1,180 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static i18n %}
+
+{% block content %}
+                <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+
+<div class="container" style="background-image: url('/static/images/bg.jpg')">
+<script>
+let count1=0;
+let count2=0;
+let count3=0;
+  function increment1() {
+     count1 = parseInt((document.getElementById('ll').textContent),10);
+
+        count1 = count1 + 1;
+
+     console.log(count2);
+    document.getElementById('ll').innerText = count1;
+
+  }
+    function increment2() {
+
+     count2 = parseInt((document.getElementById('ll2').textContent),10);
+
+    count2 = count2 + 1;
+
+
+     document.getElementById('ll2').innerText = count2;
+
+  }
+    function increment3() {
+
+      count3 = parseInt((document.getElementById('ll3').textContent),10);
+
+             count3 = count3 + 1;
+
+      document.getElementById('ll3').innerText = count3;
+  }
+</script>
+ <div class="content">
+				<div class="container_12">
+					<div class="grid_7" style="width:70%;height:auto;float: left">
+						<div class="pad1">
+							   <b><font style="background-image: -webkit-linear-gradient(left, #145196, rgba(5,24,230,0.66) 25%, #144196 50%, #0567e6 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 180%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;font-size: large"><b style="font-size: 23px">{% translate 'Video' %}</b></font></b><br/>
+							<div class="video_block">
+								<p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: 5px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);
+"
+><strong>
+<span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" style="background-image: url('/static/images/bg.jpg')">{% translate 'Share One' %}</span></strong></span></p>
+								<div style="font-family: STXingkai;width: 100%;height:100%;float: left;font-size: 20px;">学而时习之,不亦说乎?有朋自远方来,不亦乐乎?人不知而不愠,不亦君子乎?---《学而》</div>
+                                <video
+                                  id="video"
+                                  src="/static/images/1.mp4"
+                                  controls = "true"
+                                  poster="/static/images/togeher.png" width="50%" height="auto"
+                                  preload="auto"
+                                  webkit-playsinline="true"
+                                  playsinline="true"
+                                  x-webkit-airplay="allow"
+                                  x5-video-player-type="h5"
+                                  x5-video-player-fullscreen="true"
+                                  x5-video-orientation="portraint"
+                                  style="object-fit:fill;margin-left:25%">
+                                </video>
+                           <div style="border: 1px dashed #c6c8ca;text-align: right;border: none"><div  onclick="increment1()"><span class="mr1-2">{% translate 'like' %}</span> <span id="ll">1</span></div>
+
+							</div>
+                            </div>
+							<div class="video_block">
+									<p style="background-image: url('/static/images/bg.jpg')">
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: 5px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong>
+<span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30px" height="30px" >{% translate 'Share Two' %}</span></strong></span></p>
+								<div style="font-family: STXingkai;width: 100%;height:100%;float: left;font-size: 20px;">学而不思则罔，思而不学则殆。---《为政》</div>
+                                <video
+                                  id="video"
+                                  src="/static/images/1.mp4"
+                                  controls = "true"
+                                  poster="/static/images/togeher.png" width="50%" height="auto"
+                                  preload="auto"
+                                  webkit-playsinline="true"
+                                  playsinline="true"
+                                  x-webkit-airplay="allow"
+                                  x5-video-player-type="h5"
+                                  x5-video-player-fullscreen="true"
+                                  x5-video-orientation="portraint"
+                                  style="object-fit:fill;margin-left:25%">
+                                </video>
+                         <div style="border: 1px dashed #c6c8ca;text-align: right;border: none"><div  onclick="increment2()"><span class="mr1-2">{% translate 'like' %}</span> <span id="ll2">3</span></div>
+
+					         	</div>
+                              </div>
+
+							<div class="video_block">
+									<p>
+    <span style="
+     text-align: center;
+     padding-bottom: 6px;
+     padding-left: 10px;
+     padding-right: 70%;
+     color: rgba(6,53,180,0.56);
+     padding-top: 5px;
+     box-shadow: 10px 10px 5px rgba(136,136,136,0.12);"
+><strong>
+<span style="font-size: 18px;"><img src="/static/images/icon103.png" width="30em" height="30em" style="background-image: url('/static/images/bg.jpg')">{% translate 'Share Three' %}</span></strong></span></p>
+								<div style="font-family: STXingkai;width: 100%;height:100%;float: left;font-size: 20px;background-image: url('/static/images/bg.jpg')">博学而笃志，切问而近思，仁在其中矣。---《子张》</div>
+                                <video
+                                  id="video"
+                                  src="/static/images/1.mp4"
+                                  controls = "true"
+                                  poster="/static/images/togeher.png" width="50%" height="auto"
+                                  preload="auto"
+                                  webkit-playsinline="true"
+                                  playsinline="true"
+                                  x-webkit-airplay="allow"
+                                  x5-video-player-type="h5"
+                                  x5-video-player-fullscreen="true"
+                                  x5-video-orientation="portraint"
+                                  style="object-fit:fill;margin-left:25%">
+                                </video>
+                         <div style="border: 1px dashed #c6c8ca;text-align: right;border: none"><div  onclick="increment3()"><span class="mr1-2">{% translate 'like' %}</span> <span id="ll3">2</span></div>
+
+							</div>
+
+						</div>
+					</div>
+                    </div>
+					<div class="grid_4 prefix_1" style="height:auto">
+						<div class="donate">{% translate 'Popular Sayings' %}</div>
+                         	<ul class="list_ul">
+							<li>学而时习之,不亦说乎?有朋自远方来,不亦乐乎?人不知而不愠,不亦君子乎?</li>
+							<li>学而不思则罔，思而不学则殆。</li>
+							<li>博学而笃志，切问而近思，仁在其中矣。</li>
+							<li>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。</li>
+							<li>三人行，必有我师焉。择其善者而从之，其不善者而改之。</li>
+							<li>三军可夺帅也，匹夫不可夺志也。</li>
+
+						</ul>
+					</div>
+						<div class="grid_4 prefix_1" style="height:auto">
+						<div class="donate">{% translate 'Popular Videos' %}</div>
+                         	<ul class="list_ul1">
+							<li>学而时习之,不亦说乎?有朋自远方来,不亦乐乎?人不知而不愠,不亦君子乎?</li>
+							<li>学而不思则罔，思而不学则殆。</li>
+							<li>博学而笃志，切问而近思，仁在其中矣。</li>
+							<li>饭疏食，饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。</li>
+							<li>三人行，必有我师焉。择其善者而从之，其不善者而改之。</li>
+							<li>三军可夺帅也，匹夫不可夺志也。</li>
+
+						</ul>
+					</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>
+<script><link href="/static/js/scripts.js"></script>
+{% endblock content %}
+
+

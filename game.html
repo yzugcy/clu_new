@@ -1,0 +1,434 @@
+{% extends 'base/base_game.html' %}
+{% load static %}
+{% load static i18n %}
+
+<div class="container">
+
+    {% block content %}
+  <meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+    body{
+      margin: 0 auto;
+    }
+
+    .game-box{
+		/* overflow: hidden; */
+      position: fixed;
+      top: 40px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 600px;
+      height: 600px;
+      border: 2px solid skyblue;
+      padding: 1px;
+    }
+
+    .game{
+      height: 100%;
+      position: relative;
+    }
+
+    .game>div{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: url("./bg1.jpg");
+      background-repeat: no-repeat;
+      padding: 1px;
+      box-sizing: border-box;
+      background-clip: content-box;
+	  transition: all 0.5s;
+    }
+
+    .game>.a1{
+      left: 0;
+      top: 0;
+      background-position: 0px 0px;
+    }
+    .game>.a2{
+      left: 200px;
+      top: 0;
+      background-position: -200px 0px;
+    }
+    .game>.a3{
+      left: 400px;
+      top: 0;
+      background-position: -400px 0px;
+    }
+
+    .game>.a4{
+      left: 0;
+      top: 200px;
+      background-position: 0 -200px;
+    }
+    .game>.a5{
+      left: 200px;
+      top: 200px;
+	  opacity: 0;
+      background-position: -200px -200px;
+    }
+    .game>.a6{
+      left: 400px;
+      top: 200px;
+      background-position: -400px -200px;
+      /* background-image: none; */
+    }
+
+    .game>.a7{
+      left: 0;
+      top: 400px;
+      background-position: 0 -400px;
+    }
+    .game>.a8{
+      left: 200px;
+      top: 400px;
+      background-position: -200px -400px;
+    }
+    .game>.a9{
+      left: 400px;
+      top: 400px;
+      background-position: -400px -400px;
+    }
+	#btn{
+		border: 0;
+		background-color: transparent;
+		width: 60px;
+		height: 60px;
+		outline: none;
+		float: left;
+	}
+	#btn img{
+		width: 100%;
+		height: 100%;
+	}
+	.star{
+		width: 600px;
+		padding: 10px 0;
+		margin: 10px auto;
+		height: 50px;
+		overflow: hidden;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	.mxy{
+		width: 600px;
+		padding: 10px 0;
+		margin: 10px auto;
+	}
+  </style>
+
+<body>
+	<div class="star"><button type="button" id="btn"><img src="/static/images/重新开始.png" ></button> <span>&nbsp;{%  translate 'Can you guess which dynasty?' %}</span></div>
+	<div class="star">
+		<select id="select" style="padding: 5px; font-size: 16px;" >
+			<option>-{%  translate 'Please Select'%}-</option>
+			<option>{%  translate 'Xia' %}</option>
+			<option>{%  translate 'Shang' %}</option>
+			<option>{%  translate 'Zhou' %}</option>
+			<option>{%  translate 'The Spring and Autumn Annals' %}</option>
+			<option>{%  translate 'Qin' %}</option>
+			<option>{%  translate 'Gan' %}</option>
+			<option>{%  translate 'Three Kingdoms' %}</option>
+			<option>{%  translate 'Sui' %}</option>
+			<option>{%  translate 'Tang' %}</option>
+			<option>{%  translate 'Song' %}</option>
+			<option>{%  translate 'Yuan' %}</option>
+			<option>{%  translate 'Ming' %}</option>
+			<option>{%  translate 'Qing' %}</option>
+		</select>
+		<button id="sub_button" style="padding: 5px 10px; font-size: 16px; background-color: #007bff; color: #fff; border: none; cursor: pointer;">{%  translate 'Submit' %}</button>
+	</span>
+	</div>
+
+  <div class="game-box">
+    <div class="game" id="game">
+      <div class='a1'></div>
+      <div class='a2'></div>
+      <div class='a3'></div>
+      <div class='a4'></div>
+      <div class='a5' id="while"></div>
+      <div class='a6'></div>
+      <div class='a7'></div>
+      <div class='a8'></div>
+      <div class='a9'></div>
+    </div>
+  </div>
+
+  	<div id="img_div" style="width: 300px; height: 300px; margin-left: 2%;">
+		<p>{%  translate 'The image content comes from "Baidu Pedia".' %}</p>
+		<img id="img_show" alt="图片1" width="100%" height="100%">
+		<!-- <p id="p_content"></p> -->
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	//图片常量
+	const imgarr=['t1','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13']
+	// const mxy_name =none
+	let tu;
+	//创建初始常量
+	// const arr=['a1','a2','a3','a4','a5','a6','a7','a8','a9'];
+	const arr=[{left:'0px',top:'0px',},{left:'200px',top:'0px'},{left:'400px',top:'0px'},{left:'0px',top:'200px'},{left:'200px',top:'200px'},{left:'400px',top:'200px'},{left:'0px',top:'400px'},{left:'200px',top:'400px'},{left:'400px',top:'400px'}]
+	//备用变量用于随机
+	let arr1=arr.concat()
+	//sort方法随机数组,=>函数是es6高级写法,相当于function(){}
+	arr1.sort(()=>{
+		return Math.random()-0.5;
+	})
+	// console.log(arr1)
+	//创建构造函数,es6语法糖写法
+	class Puzzle{
+		constructor(arr,arr1){
+			this.list=arr;
+			this.rlist=arr1;
+		}
+		//原型里添加函数,随机拼图
+			disor(){
+				//获取所有拼图标签
+				let game=document.querySelectorAll('#game div');
+				//获取空白位置
+				let lucency=document.querySelector('#while')
+				let con=this.list;
+				//遍历所有标签并为其添加left和top
+				for(let i=0;i<game.length;i++){
+					// console.log(this.rlist[i])
+					game[i].style.left=this.rlist[i].left
+					game[i].style.top=this.rlist[i].top
+
+
+					//给每个div加鼠标按下事件
+					// game[i].offsetLeft
+					game[i].onclick=function(){
+						//添加拖动事件
+						// this.onmousemove=function(){
+							//拿到空白位置的left值
+							let pleft=lucency.offsetLeft
+							//拿到空白位置的top值
+							let ptop=lucency.offsetTop
+							//获取点击方块的left
+							let gleft=this.offsetLeft;
+							//获取点击方块的top
+							let gtop=this.offsetTop
+
+							//判断其高度宽度差距决定是否移动位置
+							if(gleft-pleft<=200&&gleft-pleft>0&&gtop==ptop || pleft-gleft<=200&&pleft-gleft>0&&gtop==ptop){
+								this.style.left=pleft+'px';
+								lucency.style.left=gleft+'px'
+							}else if(gtop-ptop<=200&&gtop-ptop>0&&gleft==pleft || ptop-gtop<=200&&ptop-gtop>0&&gleft==pleft){
+								this.style.top=ptop+'px';
+								lucency.style.top=gtop+'px'
+							}
+
+						// };
+						//创建一个数组做记录
+						let a=[]
+						for(let j=0;j<con.length;j++){
+
+							// console.log('conleft',con[j].left)
+							// console.log('game',game[j].style.left)
+							//不断与原数组做比较,如果符合就给数组a加一位数
+							if(con[j].left==game[j].style.left&&con[j].top==game[j].style.top){
+								a.push(j)
+
+								if(a.length==con.length){
+									//全部符合就显示隐藏模块
+									lucency.style.opacity='1'
+									alert("Congratulate！")
+									game[j].onclick=null
+								}
+							}
+						}
+						console.log(a)
+
+
+					}
+					// //添加鼠标弹起事件
+					// game[i].onmouseup=function(){
+					// 	//取消拖动事件
+					// 	this.onmousemove=null
+					// };
+				}
+
+			}
+			//随机图片
+			img(imgarr){
+				//获取所有拼图标签
+				let game=document.querySelectorAll('#game div');
+				//随机图片
+				tu=imgarr[Math.floor(Math.random()*(imgarr.length))];
+				// if(tu=='t1'){  // 夏朝
+				// 	document.getElementById("p_content").textContent = "The story of Yu the Great's flood control is a legendary tale from ancient China, describing Yu's efforts and wisdom in controlling the floods. According to legend, in ancient times, floods were frequent and caused great troubles for the people. To solve this problem, Yu the Great was recommended to Emperor Yao by Jiang Taigong, and Emperor Yao tasked him with controlling the floods. ";
+				// }
+				// if(tu=='t2'){  // 商朝
+				// 	console.log("pass")
+				// }
+				// if(tu=='t3'){  // 周朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"Duke Zhou warned Bo Qin, saying: I am the son of King Wen, the younger brother of King Wu, and the uncle of King Cheng. I am not lowly in heaven. However, I bathe three times, catch my hair, eat three times, spit out food, and stand up to treat scholars. I am afraid that I will lose the wise men in the world. As a child of Lu, be careful not to be proud of your country. ";
+				// }
+				// if(tu=='t4'){  // 春秋
+				// 	document.getElementById("p_content").textContent =
+				// 	"After Gou Jian was captured, he was forced to sleep on the firewood and taste his courage. He suffered hardships and endured humiliation in front of Fu Chai in the state of Wu, showing extraordinary perseverance and wisdom.";
+				// }
+				// if(tu=='t5'){  // 秦朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"The Great Wall of Qin is the first Great Wall built of masonry in China. Its construction began during the Qin Dynasty (221 BC to 206 BC) after Qin Shihuang unified China. It was used to defend against the invasion of northern nomads. The Great Wall of Qin is famous for its strength and majesty. With a total length of more than 5,000 kilometers, it is one of the longest city walls in the world.";
+				// }
+				// if(tu=='t6'){  // 汉朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"Huo Qubing performed well in the military and showed extraordinary military talents at a young age. He participated in quelling the Xiongnu rebellion, defeated the main force of the Xiongnu, and made important contributions to the stability of the northwest frontier in the Western Han Dynasty. In the war, he was good at using troops and forming formations, and was known as the Magical General";
+				// }
+				// if(tu=='t7'){  // 三国
+				// 	document.getElementById("p_content").textContent =
+				// 	"During this period, there were many wars and political struggles among the Three Kingdoms. Eventually, the Wei Kingdom replaced the Eastern Han Dynasty and established the Western Jin Dynasty, ending the Three Kingdoms period.";
+				// }
+				// if(tu=='t8'){  // 隋朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"The construction of the Grand Canal began with Yang Jian, the founding emperor of the Sui Dynasty, and lasted for decades, spanning the Sui, Tang, Song, Yuan, Ming, and Qing dynasties. Its main function is to connect China's Yellow River Basin and Yangtze River Basin, facilitate waterway transportation, strengthen north-south connections, and promote economic development and cultural exchanges.";
+				// }
+				// if(tu=='t9'){  // 唐朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"Wu Meiniang was a female emperor in the Tang Dynasty in Chinese history and the only female emperor in Chinese history who officially ascended the throne and proclaimed herself emperor. During her reign, she actually took control of the political power of the Tang Dynasty and was the only woman in Chinese history to rule as emperor.";
+				// }
+				// if(tu=='t10'){  // 宋朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"The official uniforms of the Song Dynasty were mainly dark-colored, with attention to detail and decoration, reflecting the noble status and social status, and reflecting the social hierarchy and cultural characteristics of the time.";
+				// }
+				// if(tu=='t11'){  // 元朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"Temujin was the founder and unifier of the Mongol Empire and one of the greatest conquerors in world history. He was born into a noble family on the Mongolian grasslands. He experienced a hard life in his early years, but with extraordinary wisdom and courage, he eventually became a great conqueror.";
+				// }
+				// if(tu=='t12'){  // 明朝
+				// 	document.getElementById("p_content").textContent =
+				// 	"";
+				// }
+				// if(tu=='t4'){
+
+				// }
+				// if(tu=='t4'){
+
+				// }
+				// if(tu=='t4'){
+
+				// }
+				// if(tu=='t4'){
+
+				// }
+				// if(tu=='t4'){
+
+				// }
+
+                                                                                        //mxy 设置参照图片
+				// document.getElementById("img_show").style.backgroundImage = ;
+				// document.getElementById("img_show").setAttribute("src", url("./'+tu+'.png"));
+				document.getElementById("img_show").setAttribute("src", '/static/images/'+tu+'.png');
+				//遍历所有拼图div标签
+				for(let k=0;k<this.rlist.length;k++){
+					//给每个div更改背景图片
+					game[k].style.backgroundImage=' url("/static/images/'+tu+'.png")'
+				}
+			}
+
+	}
+	//实例化构造函数
+	let pbreak=new Puzzle(arr,arr1)
+	//调用随机图片方法
+	pbreak.img(imgarr)
+	//调用拼图方法
+	pbreak.disor()
+
+	//点击按钮实现页面以达到重新开始或者随机图片
+	let btn=document.querySelector('#btn')
+	btn.onclick=function(){
+		location.reload()
+	}
+
+
+	// mxy 2024年3月30日17点49分
+	let sub_button=document.querySelector('#sub_button')
+	sub_button.onclick=function(){
+		// 获取<select>元素
+		var selectElement = document.querySelector('#select');
+		// 获取当前选定的值
+		var selectedValue = selectElement.value;
+		console.log(tu)
+		console.log(selectedValue);
+		if(tu=="t1"&& selectedValue=="夏朝"){
+			alert('Congratulate！')
+			location.reload()
+		}
+		else if(tu=="t2"&& selectedValue=="商朝"){
+
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t3"&& selectedValue=="周朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+
+		else if(tu=="t4"&& selectedValue=="春秋"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+
+		else if(tu=="t5"&& selectedValue=="秦朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t6"&& selectedValue=="汉朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t7"&& selectedValue=="三国"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t8"&& selectedValue=="隋朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t9"&& selectedValue=="唐朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t10"&& selectedValue=="宋朝"){
+			alert('Congratulate！')
+			location.reload()
+
+		}
+		else if(tu=="t11"&& selectedValue=="元朝"){
+			alert('Congratulate！')
+			location.reload()
+		}
+		else if(tu=="t12"&& selectedValue=="明朝"){
+			alert('Congratulate！')
+			location.reload()
+		}
+		else if(tu=="t13"&& selectedValue=="清朝"){
+			alert('Congratulate！')
+			location.reload()
+		}
+		else{
+			alert("Sorry,please try again！")
+		}
+	}
+
+</script>
+        </div>
+	{% endblock content %}
